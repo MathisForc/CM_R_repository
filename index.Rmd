@@ -2,29 +2,144 @@
 title: "Analyzing Sub-genres in Electronic Music"
 author: "Matthijs Vork"
 date: "2024-02-23"
-output: html_document
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: rows
+    vertical_layout: fill
 ---
 
 ```{r setup, include=FALSE}
+library(spotifyr)
+library(usethis)
+library(ggplot2)
+library(flexdashboard)
+library(dplyr)
+
 knitr::opts_chunk$set(echo = TRUE)
+house <- get_playlist_audio_features("", "1fy0hXaIQ3FXMY7hEwkpIQ")
+electro <- get_playlist_audio_features("", "24o6xsK6nPBeAM3HG4c2ZF")
+minimal <- get_playlist_audio_features("", "58uxcewPBd4fQ6H7LdGuCB")
+combined <- get_playlist_audio_features("", "5ws73Bq4kqGKpfnRYTVMuo")
+popular <- get_playlist_audio_features("", "37i9dQZF1DX18jTM2l2fJY")
 ```
 
-## R Markdown
+Introduction
+===================================== 
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+Corpus explanation: My corpus’s main category is electronic music, having subgenres as: Electro, House, Minimal. The corpus currently consists of 1127 tracks, where there are 441 electro tracks, 153 house tracks, and 503 minimal tracks. I’ve chosen this corpus since I am an electronic music producer and a DJ and are mainly focused on unheard underground records from the house spectrum ranging between 1980 till 2005. Most of the tracks which are currently present in my corpus are remastered versions of vinyl records from that region. Many people often state that House music is a boring repetitive genre, but I am clearly convinced that House music offers a large scale of unique musical compositions to the music catalogue. Similar albums, artists, and people are unique within the corpus. The main similarity is (hopefully) in its audio data and arrangement of the tracks. The gaps between the genres are relative. The gap between the Electro genre and a completely different genre such as Indie would be larger compared to the gap between the Acid genre and the Electro genre. But I am unsure how large the gap between House and Electro will be within my corpus. The tracks currently in the corpus are representative to their genres. The qualities of the tracks could differ since they originate from different years, so they had different recording software. Also some tracks are remastered or digitised throughout the years. So there is a distinction between the quality of the tracks. Some tracks in the corpus have a really low BPM (around 60) compared to other main BPM (129) in the corpus. These are really ambient-like tracks instead of more house-alike tracks. Several tracks from “Craig Richards” are really experimental, abstract, industrial tracks which could be seen as atypical tracks. Typical tracks are the standard popular house tracks within the corpus such as “Schatrax - Keep on Live (Original Mix)”.
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+Analysation of Data set
+=====================================     
+### Figure 1: Tempo analysis
+-----------------------------------------------------------------------
+This figure depicts a boxplot with the x-axis representing the categories of the Corpus and the y-axis representing the tempo of the tracks in beats per minute (BPM). Notably, the tempo for the electro category surpasses that of the remaining categories. The mean tempo for electro is around 135 BPM, whereas for the other categories, it remains close to 125 BPM. Both categories exhibit tight clustering around their respective means. Additionally, the plots reveal the presence of outliers, underscoring the distinct stylistic attributes inherent to each genre. This observation representing to the unique characteristics defining the genres, offering valuable insights into their individual musical styles.
 
-```{r cars}
-summary(cars)
+```{r static_plot, echo=FALSE}
+categories <-
+  bind_rows(
+    house |> mutate(category = "House"),
+    electro |> mutate(category = "Electro"),
+    minimal |> mutate(category = "Minimal")
+  )
+
+categories |>
+  ggplot(aes(x = category, y = tempo)) +
+  geom_violin()
 ```
 
-## Including Plots
+### Figure 2: Duration analysis
+-----------------------------------------------------------------------
+This figure presents a boxplot, with the x-axis representing the categories of the Corpus and the y-axis representing the duration of the tracks. Notably, the electro category exhibits shorter durations compared to the other categories. Conversely, the minimal category displays less condensation than the others, demonstrating a higher variance and containing numerous outliers. This divergence underscores the distinct stylistic attributes inherent to each genre, offering intersting insights into their respective characteristics.
+```{r, echo=FALSE}
+categories <-
+  bind_rows(
+    house |> mutate(category = "House"),
+    electro |> mutate(category = "Electro"),
+    minimal |> mutate(category = "Minimal")
+  )
 
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
+categories |>
+  ggplot(aes(x = category, y = track.duration_ms)) +
+  geom_violin()
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+### Chart B
+-----------------------------------------------------------------------
+This figure illustrates a boxplot, with the x-axis representing the categories of the Corpus and the y-axis representing the popularity of the tracks. Notably, the house category emerges as less popular than the others, characterized by a more condensed distribution compared to the remaining categories. This observation may seem counterintuitive given that house music typically enjoys greater popularity and accessibility compared to electro or minimal genres. However, the underlying corpus for house comprises predominantly unpopular tracks, potentially explaining its lower popularity compared to the other categories.
+```{r, echo=FALSE}
+categories <-
+  bind_rows(
+    house |> mutate(category = "House"),
+    electro |> mutate(category = "Electro"),
+    minimal |> mutate(category = "Minimal")
+  )
+
+categories |>
+  ggplot(aes(x = category, y = track.popularity)) +
+  geom_violin()
+```
+
+### Chart D
+-----------------------------------------------------------------------
+This figure comprises three sub-figures, each representing a scatter plot. The x-axis delineates the Tempo categories, while the y-axis represents the Energy of the tracks. Notably, in the scatter plot depicting electro tracks, regardless of the tempo's value, the energy levels consistently remain high throughout the track. Conversely, the remaining figures show the distinct characteristics of their respective categories; minimal tracks exhibit a more relaxed pace, reflecting lower energy levels compared to the other categories.
+```{r, echo=FALSE}
+
+combined |>                    # Start with awards.
+  mutate(
+    mode = ifelse(mode == 0, "Minor", "Major")
+  ) |>
+  ggplot(                     # Set up the plot.
+    aes(
+      x = valence,
+      y = energy,
+      size = loudness,
+      colour = mode
+    )
+  ) +
+  geom_point() +              # Scatter plot.
+  geom_rug(linewidth = 0.1) + # Add 'fringes' to show data distribution.
+  geom_text(                  # Add text labels from above.
+    aes(
+      x = valence,
+      y = energy,
+      label = label
+    ),
+    data = 
+      tibble(
+        label = c("STEAM WALTZ", "Darkness and Scattered Light"),
+        category = c("Edisons", "Grammys"),
+        valence = c(0.104, 0.0339),
+        energy = c(0.992, 0.00166)
+      ),
+    colour = "black",         # Override colour (not mode here).
+    size = 3,                 # Override size (not loudness here).
+    hjust = "left",           # Align left side of label with the point.
+    vjust = "center",         # Align vertical center of label with the point.
+    nudge_x = 0.02            # Nudge the label slightly right.
+  ) +
+  facet_wrap(~ category) +    # Separate charts per playlist.
+  scale_x_continuous(         # Fine-tune the x axis.
+    limits = c(0, 1),
+    breaks = c(0, 0.50, 1),   # Use grid-lines for quadrants only.
+    minor_breaks = NULL       # Remove 'minor' grid-lines.
+  ) +
+  scale_y_continuous(         # Fine-tune the y axis in the same way.
+    limits = c(0, 1),
+    breaks = c(0, 0.50, 1),
+    minor_breaks = NULL
+  ) +
+  scale_colour_brewer(        # Use the Color Brewer to choose a palette.
+    type = "qual",            # Qualitative set.
+    palette = "Paired"        # Name of the palette is 'Paired'.
+  ) +
+  scale_size_continuous(      # Fine-tune the sizes of each point.
+    trans = "exp",            # Use an exp transformation to emphasise loud.
+    guide = "none"            # Remove the legend for size.
+  ) +
+  theme_light() +             # Use a simpler theme.
+  labs(                       # Make the titles nice.
+    x = "Valence",
+    y = "Energy",
+    colour = "Mode"
+  )
+```
