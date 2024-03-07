@@ -1291,56 +1291,301 @@ compmus_long_distance(
 </div>
 
 
-Week 7
+Week 4
 =====================================
 
 Row {.tabset .tabset-fade}
 -------------------------------------
 
-### Tempo analysis
+
+### Chromagrams
 <div class="wrapper">
 
 <div class="headr">
-Tempo analysis
+Chromagrams
 </div>
 <div class="text">
-This figure depicts a boxplot with the x-axis representing the categories of the Corpus and the y-axis representing the tempo of the tracks in beats per minute (BPM). Notably, the tempo for the electro category surpasses that of the remaining categories. The mean tempo for electro is around 135 BPM, whereas for the other categories, it remains close to 125 BPM. Both categories exhibit tight clustering around their respective means. Additionally, the plots reveal the presence of outliers, underscoring the distinct stylistic attributes inherent to each genre. This observation representing to the unique characteristics defining the genres, offering valuable insights into their individual musical styles.
-</div>
+These figures present the chromagrams of three tracks from the corpus. In the house track, a less consistent pattern is noticeable, with clear changes in structure throughout the track. Two bridges and build-ups are evident, along with a longer outro compared to the intro. In the minimal track, a distinct static repetitive structure is visible, reaffirming the characteristic of minimal house music. Similarly, in the electro track, repetition is evident, with two bridges around 40 and 140 seconds, and an outro around 215 seconds that alters the energy of the track.
+<div class="figures">
+<div class="figure">
 
 ```{r, echo=FALSE}
-  categories <-
-    bind_rows(
-      house |> mutate(category = "House"),
-      electro |> mutate(category = "Electro"),
-      minimal |> mutate(category = "Minimal")
+wood <-
+  get_tidy_audio_analysis("4R0lg0dcpePAao09jJFy0R") |>
+  select(segments) |>
+  unnest(segments) |>
+  select(start, duration, pitches)
+
+
+wood |>
+  mutate(pitches = map(pitches, compmus_normalise, "euclidean")) |>
+  compmus_gather_chroma() |>
+  ggplot(
+    aes(
+      x = start + duration / 2,
+      width = duration,
+      y = pitch_class,
+      fill = value
     )
-
-  categories |>
-    ggplot(aes(x = category, y = tempo)) +
-    geom_violin()
+  ) +
+  geom_tile() +
+  ggtitle("House: 'Soul Mass Transit System - Wine'") +
+  labs(x = "Time (s)", y = NULL, fill = "Magnitude") +
+  theme_minimal() +
+  scale_fill_viridis_c()
 ```
+
 </div>
 
-### Duration analysis
+<div class="figure">
+
+```{r, echo=FALSE}
+wood <-
+  get_tidy_audio_analysis("49G8l1W2DTS6WyT6RBWKIO") |>
+  select(segments) |>
+  unnest(segments) |>
+  select(start, duration, pitches)
+
+
+wood |>
+  mutate(pitches = map(pitches, compmus_normalise, "euclidean")) |>
+  compmus_gather_chroma() |>
+  ggplot(
+    aes(
+      x = start + duration / 2,
+      width = duration,
+      y = pitch_class,
+      fill = value
+    )
+  ) +
+  geom_tile() +
+  ggtitle("Minimal: 'Losoul - Below The Clouds (Original Mix)'") +
+  labs(x = "Time (s)", y = NULL, fill = "Magnitude") +
+  theme_minimal() +
+  scale_fill_viridis_c()
+```
+
+</div>
+
+<div class="figure">
+
+```{r, echo=FALSE}
+wood <-
+  get_tidy_audio_analysis("3wnf2NB94kYM9mYYekeqrY") |>
+  select(segments) |>
+  unnest(segments) |>
+  select(start, duration, pitches)
+
+
+wood |>
+  mutate(pitches = map(pitches, compmus_normalise, "euclidean")) |>
+  compmus_gather_chroma() |>
+  ggplot(
+    aes(
+      x = start + duration / 2,
+      width = duration,
+      y = pitch_class,
+      fill = value
+    )
+  ) +
+  geom_tile() +
+  ggtitle("Electro: 'DJ MELL G - Juicy Gang'") +
+  labs(x = "Time (s)", y = NULL, fill = "Magnitude") +
+  theme_minimal() +
+  scale_fill_viridis_c()
+```
+
+</div>
+</div>
+</div>
+
+### Dynamic Time Warping
 <div class="wrapper">
 
 <div class="headr">
-Duration analysis
+Dynamic Time Warping
 </div>
 <div class="text">
-This figure presents a boxplot, with the x-axis representing the categories of the Corpus and the y-axis representing the duration of the tracks. Notably, the electro category exhibits shorter durations compared to the other categories. Conversely, the minimal category displays less condensation than the others, demonstrating a higher variance and containing numerous outliers. This divergence underscores the distinct stylistic attributes inherent to each genre, offering intersting insights into their respective characteristics.
+These visuals exhibit the dynamic time warping of three tracks from the corpus.
 </div>
+
+<div class="figures">
+<div class="figure">
 
 ```{r, echo=FALSE}
-categories <-
-  bind_rows(
-    house |> mutate(category = "House"),
-    electro |> mutate(category = "Electro"),
-    minimal |> mutate(category = "Minimal")
-  )
+## Electro: Setaoc Mass - Disrepair
+setaoc <-
+  get_tidy_audio_analysis("5GQaG7S1blUhspT0Dzhngg") |>
+  select(segments) |>
+  unnest(segments) |>
+  select(start, duration, pitches)
+## Minimal: Petre Inspirescu - Sakadat
+sakadat <-
+  get_tidy_audio_analysis("1rnTSEBS2oVLlRBLOQiomo") |>
+  select(segments) |>
+  unnest(segments) |>
+  select(start, duration, pitches)
 
-categories |>
-  ggplot(aes(x = category, y = track.duration_ms)) +
-  geom_violin()
+compmus_long_distance(
+  setaoc |> mutate(pitches = map(pitches, compmus_normalise, "chebyshev")),
+  sakadat |> mutate(pitches = map(pitches, compmus_normalise, "chebyshev")),
+  feature = pitches,
+  method = "euclidean"
+) |>
+  ggplot(
+    aes(
+      x = xstart + xduration / 2,
+      width = xduration,
+      y = ystart + yduration / 2,
+      height = yduration,
+      fill = d
+    )
+  ) +
+  geom_tile() +
+  ggtitle("House") +
+  coord_equal() +
+  labs(x = "Brawther - Basix (Deep Mix)", y = "William Caycedo - Roasted (Original Mix)") +
+  theme_minimal() +
+  scale_fill_viridis_c(guide = NULL)
 ```
+
 </div>
+
+<div class="figure">
+
+```{r, echo=FALSE}
+## Electro: Setaoc Mass - Disrepair
+setaoc <-
+  get_tidy_audio_analysis("5JcTPYvJmKbgQa9tffD3fg") |>
+  select(segments) |>
+  unnest(segments) |>
+  select(start, duration, pitches)
+## Minimal: Petre Inspirescu - Sakadat
+sakadat <-
+  get_tidy_audio_analysis("5GDnFk9M3qPlTKY4XIgYdl") |>
+  select(segments) |>
+  unnest(segments) |>
+  select(start, duration, pitches)
+
+compmus_long_distance(
+  setaoc |> mutate(pitches = map(pitches, compmus_normalise, "chebyshev")),
+  sakadat |> mutate(pitches = map(pitches, compmus_normalise, "chebyshev")),
+  feature = pitches,
+  method = "euclidean"
+) |>
+  ggplot(
+    aes(
+      x = xstart + xduration / 2,
+      width = xduration,
+      y = ystart + yduration / 2,
+      height = yduration,
+      fill = d
+    )
+  ) +
+  geom_tile() +
+  ggtitle("Minimal") +
+  coord_equal() +
+  labs(x = "iO (Mulen) - Stick Out", y = "Ricardo Villalobos - Logohitz") +
+  theme_minimal() +
+  scale_fill_viridis_c(guide = NULL)
+```
+
+</div>
+
+<div class="figure">
+
+```{r, echo=FALSE}
+## Electro: Setaoc Mass - Disrepair
+setaoc <-
+  get_tidy_audio_analysis("4Co3Fmz3EpfiQE3U5HfoMY") |>
+  select(segments) |>
+  unnest(segments) |>
+  select(start, duration, pitches)
+## Minimal: Petre Inspirescu - Sakadat
+sakadat <-
+  get_tidy_audio_analysis("5oisJqdx3cXLCd9H5Xdvzc") |>
+  select(segments) |>
+  unnest(segments) |>
+  select(start, duration, pitches)
+
+compmus_long_distance(
+  setaoc |> mutate(pitches = map(pitches, compmus_normalise, "chebyshev")),
+  sakadat |> mutate(pitches = map(pitches, compmus_normalise, "chebyshev")),
+  feature = pitches,
+  method = "euclidean"
+) |>
+  ggplot(
+    aes(
+      x = xstart + xduration / 2,
+      width = xduration,
+      y = ystart + yduration / 2,
+      height = yduration,
+      fill = d
+    )
+  ) +
+  geom_tile() +
+  ggtitle("Electro") +
+  coord_equal() +
+  labs(x = "Ludwig A.F. - First Flight", y = "D.I.E. - Programming") +
+  theme_minimal() +
+  scale_fill_viridis_c(guide = NULL)
+```
+
+</div>
+</div>
+</div>
+
+
+<!-- Week 7 -->
+<!-- ===================================== -->
+
+<!-- Row {.tabset .tabset-fade} -->
+<!-- ------------------------------------- -->
+
+<!-- ### Tempo analysis -->
+<!-- <div class="wrapper"> -->
+
+<!-- <div class="headr"> -->
+<!-- Tempo analysis -->
+<!-- </div> -->
+<!-- <div class="text"> -->
+<!-- This figure depicts a boxplot with the x-axis representing the categories of the Corpus and the y-axis representing the tempo of the tracks in beats per minute (BPM). Notably, the tempo for the electro category surpasses that of the remaining categories. The mean tempo for electro is around 135 BPM, whereas for the other categories, it remains close to 125 BPM. Both categories exhibit tight clustering around their respective means. Additionally, the plots reveal the presence of outliers, underscoring the distinct stylistic attributes inherent to each genre. This observation representing to the unique characteristics defining the genres, offering valuable insights into their individual musical styles. -->
+<!-- </div> -->
+
+<!-- ```{r, echo=FALSE} -->
+<!--   categories <- -->
+<!--     bind_rows( -->
+<!--       house |> mutate(category = "House"), -->
+<!--       electro |> mutate(category = "Electro"), -->
+<!--       minimal |> mutate(category = "Minimal") -->
+<!--     ) -->
+
+<!--   categories |> -->
+<!--     ggplot(aes(x = category, y = tempo)) + -->
+<!--     geom_violin() -->
+<!-- ``` -->
+<!-- </div> -->
+
+<!-- ### Duration analysis -->
+<!-- <div class="wrapper"> -->
+
+<!-- <div class="headr"> -->
+<!-- Duration analysis -->
+<!-- </div> -->
+<!-- <div class="text"> -->
+<!-- This figure presents a boxplot, with the x-axis representing the categories of the Corpus and the y-axis representing the duration of the tracks. Notably, the electro category exhibits shorter durations compared to the other categories. Conversely, the minimal category displays less condensation than the others, demonstrating a higher variance and containing numerous outliers. This divergence underscores the distinct stylistic attributes inherent to each genre, offering intersting insights into their respective characteristics. -->
+<!-- </div> -->
+
+<!-- ```{r, echo=FALSE} -->
+<!-- categories <- -->
+<!--   bind_rows( -->
+<!--     house |> mutate(category = "House"), -->
+<!--     electro |> mutate(category = "Electro"), -->
+<!--     minimal |> mutate(category = "Minimal") -->
+<!--   ) -->
+
+<!-- categories |> -->
+<!--   ggplot(aes(x = category, y = track.duration_ms)) + -->
+<!--   geom_violin() -->
+<!-- ``` -->
+<!-- </div> -->
