@@ -1633,13 +1633,14 @@ compmus_long_distance(
 </div>
 </div>
 
+
 Week 7
 =====================================
 
 Row {.tabset .tabset-fade}
 -------------------------------------
 
-### Novelty Functions
+### Tempo analysis
 <div class="week12_wrapper">
 
 <div class="week12_header">
