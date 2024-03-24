@@ -1414,7 +1414,6 @@ Week 8
 Row {.tabset .tabset-fade}
 -------------------------------------
 
-
 ### Chromagrams
 <div class="wrapper">
 <div class="headr">
@@ -1634,21 +1633,24 @@ compmus_long_distance(
 </div>
 </div>
 
-
 Week 7
 =====================================
 
 Row {.tabset .tabset-fade}
 -------------------------------------
 
-### Tempo analysis
-<div class="wrapper">
-<div class="headr">
+### Novelty Functions
+<div class="week12_wrapper">
+
+<div class="week12_header">
 Tempo analysis
 </div>
-<div class="text">
+
+<div class="week12_text">
 This figure depicts a boxplot with the x-axis representing the categories of the Corpus and the y-axis representing the tempo of the tracks in beats per minute (BPM). Notably, the tempo for the electro category surpasses that of the remaining categories. The mean tempo for electro is around 135 BPM, whereas for the other categories, it remains close to 125 BPM. Both categories exhibit tight clustering around their respective means. Additionally, the plots reveal the presence of outliers, underscoring the distinct stylistic attributes inherent to each genre. This observation representing to the unique characteristics defining the genres, offering valuable insights into their individual musical styles.
 </div>
+
+<div class="week12_figure">
 ```{r, echo=FALSE}
 categories <-
   bind_rows(
@@ -1662,25 +1664,31 @@ categories |>
   geom_violin()
 ```
 </div>
+</div>
+
 ### Duration analysis
-<div class="wrapper">
-<div class="headr">
+<div class="week12_wrapper">
+
+<div class="week12_header">
 Duration analysis
 </div>
-<div class="text">
+
+<div class="week12_text">
 This figure presents a boxplot, with the x-axis representing the categories of the Corpus and the y-axis representing the duration of the tracks. Notably, the electro category exhibits shorter durations compared to the other categories. Conversely, the minimal category displays less condensation than the others, demonstrating a higher variance and containing numerous outliers. This divergence underscores the distinct stylistic attributes inherent to each genre, offering intersting insights into their respective characteristics.
 </div>
 
+<div class="week12_figure">
 ```{r, echo=FALSE}
- categories <-
-   bind_rows(
-     bass_house |> mutate(category = "Bass House"),
-     microhouse |> mutate(category = "Microhouse"),
-     tech_house |> mutate(category = "Tech House")
-   )
+categories <-
+  bind_rows(
+    bass_house |> mutate(category = "Bass House"),
+    microhouse |> mutate(category = "Microhouse"),
+    tech_house |> mutate(category = "Tech House")
+  )
 
- categories |>
-   ggplot(aes(x = category, y = track.duration_ms)) +
-   geom_violin()
+categories |>
+  ggplot(aes(x = category, y = track.duration_ms)) +
+  geom_violin()
 ```
+</div>
 </div>
