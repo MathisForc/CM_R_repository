@@ -106,11 +106,11 @@ Week 12
 Row {.tabset .tabset-fade}
 -------------------------------------
 
-### Novelty Functions
+### Classifier Algorithm
 <div class="week12_wrapper">
 
 <div class="week12_header">
-Novelty Functions
+Classifier Algorithm
 </div>
 
 <div class="week12_text">
