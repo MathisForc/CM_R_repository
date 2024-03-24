@@ -110,7 +110,7 @@ Row {.tabset .tabset-fade}
 <div class="week12_wrapper">
 
 <div class="week12_header">
-Classifier Algorithm
+Classifier Algorithffm
 </div>
 
 <div class="week12_text">
