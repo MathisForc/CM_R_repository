@@ -11,19 +11,39 @@ remotes::install_github('jaburgoyne/compmus')
 library(spotifyr)
 library(plotly)
 library(tidyverse)
+library(tidymodels)
 library(usethis)
 library(ggplot2)
 library(flexdashboard)
 library(dplyr)
 library(dtw)
 library(compmus)
+library(ggdendro)
+library(heatmaply)
+library(cluster)
+library(protoclust)
 
 knitr::opts_chunk$set(echo = TRUE)
-# house <- get_playlist_audio_features("", "1fy0hXaIQ3FXMY7hEwkpIQ")
-# electro <- get_playlist_audio_features("", "24o6xsK6nPBeAM3HG4c2ZF")
-# minimal <- get_playlist_audio_features("", "58uxcewPBd4fQ6H7LdGuCB")
-# combined <- get_playlist_audio_features("", "5ws73Bq4kqGKpfnRYTVMuo")
-# popular <- get_playlist_audio_features("", "37i9dQZF1DX18jTM2l2fJY")
+bass_house <- get_playlist_audio_features("", "2QhCZhrEXekqb13nGvLpHr")
+tech_house <- get_playlist_audio_features("", "1XdDSaC9cfzSnPtZpesFsZ")
+microhouse <- get_playlist_audio_features("", "71VZsDzDNSNpJluKcZ6x5Q")
+
+get_conf_mat <- function(fit) {
+  outcome <- .get_tune_outcome_names(fit)
+  fit |> 
+    collect_predictions() |> 
+    conf_mat(truth = outcome, estimate = .pred_class)
+}  
+
+get_pr <- function(fit) {
+  fit |> 
+    conf_mat_resampled() |> 
+    group_by(Prediction) |> mutate(precision = Freq / sum(Freq)) |> 
+    group_by(Truth) |> mutate(recall = Freq / sum(Freq)) |> 
+    ungroup() |> filter(Prediction == Truth) |> 
+    select(class = Prediction, precision, recall)
+} 
+
 ```
 
 <style>
@@ -60,7 +80,232 @@ knitr::opts_chunk$set(echo = TRUE)
   font-size: 1.3vmax;
 }
 
+.week12_header{
+  padding: 2% 2% 0% 5%;
+  font-size: 4vmax;
+}
+
+.week12_text{
+  padding: 2% 5% 2% 5%;
+  font-size: 1.3vmax;
+}
+
+.week12_figure{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+
 </style>
+
+Week 12
+=====================================
+
+Row {.tabset .tabset-fade}
+-------------------------------------
+
+### Novelty Functions
+<div class="week12_wrapper">
+
+<div class="week12_header">
+Novelty Functions
+</div>
+
+<div class="week12_text">
+Another interesting approach to explore potential differences among the three sub-genres is by assessing whether a model can successfully differentiate between them. If the model shows the ability to distinguish between the sub-genres, it provides further significance to the research question. The model to be utilized is a classifier known as k-nearest neighbors (KNN). This algorithm operates as a supervised learning classifier, predicting the classification of individual data points. To adapt KNN for investigating potential differences among the sub-genres, the tracks within the corpora are represented as data points, with the three sub-genres representing distinct groupings. To train the KNN, the data points are divided into two groups: training data and test data. Since the classifier is trained on the labeled training data, which already defines the grouping of each data point, KNN operates as a supervised algorithm. After training the model, the model will make its predictions on the test data. Based on these predictions, several key metrics are established to evaluate the model's performance. True Positive (TP) indicates the correct classification of positive instances, False Positive (FP) indicates the incorrect classification of negative instances, True Negative (TN) indicates the correct classification of negative instances, and False Negative (FN) indicates the incorrect of positive instances. These metrics serve as vital tools in assessing the accuracy and effectiveness of KNN classification, offering insights into where the model may flucuate in its predictions. After training the KNN classifier on the corpora, the following predictions are made. When looking at the diagonal line in the figure there can be seen that model is able to make correct predictions. A clearer distinction between Bass House and Tech House can be seen compared to Microhouse. Microhouse has 14 True positives whereas Bass House and Tech House have 16 and 17 tracks, respectively. For Bass House the precision and recall scores are 0.86 and 0.90 (respectively), for Microhouse the precision and recall scores are 0.83 and 0.75 (respectively), and for Tech House the precision and recall scores are 0.81 and 0.85 (respectively).
+</div>
+
+<div class="week12_figure">
+```{r, echo=FALSE}
+indie <-
+  bind_rows(
+    bass_house |> mutate(playlist = "Bass House") |> slice_head(n = 20),
+    tech_house |> mutate(playlist = "Tech House") |> slice_head(n = 20),
+    microhouse |> mutate(playlist = "Microhouse") |> slice_head(n = 20)
+  ) |> 
+  add_audio_analysis()
+
+indie_features <-
+  indie |>  # For your portfolio, change this to the name of your corpus.
+  mutate(
+    playlist = factor(playlist),
+    segments = map2(segments, key, compmus_c_transpose),
+    pitches =
+      map(
+        segments,
+        compmus_summarise, pitches,
+        method = "mean", norm = "manhattan"
+      ),
+    timbre =
+      map(
+        segments,
+        compmus_summarise, timbre,
+        method = "mean",
+      )
+  ) |>
+  mutate(pitches = map(pitches, compmus_normalise, "clr")) |>
+  mutate_at(vars(pitches, timbre), map, bind_rows) |>
+  unnest(cols = c(pitches, timbre))
+
+indie_recipe <-
+  recipe(
+    playlist ~
+      danceability +
+      energy +
+      loudness +
+      speechiness +
+      acousticness +
+      instrumentalness +
+      liveness +
+      valence +
+      tempo +
+      duration,
+    data = indie_features           # Use the same name as the previous block.
+  ) |>
+  step_center(all_predictors()) |>
+  step_scale(all_predictors())      # Converts to z-scores.
+  # step_range(all_predictors())    # Sets range to [0, 1].
+
+indie_cv <- indie_features |> vfold_cv(5)
+
+knn_model <-
+  nearest_neighbor(neighbors = 1) |>
+  set_mode("classification") |> 
+  set_engine("kknn")
+indie_knn <- 
+  workflow() |> 
+  add_recipe(indie_recipe) |> 
+  add_model(knn_model) |> 
+  fit_resamples(indie_cv, control = control_resamples(save_pred = TRUE))
+
+# indie_knn |> get_conf_mat()
+
+indie_knn |> get_conf_mat() |> autoplot(type = "heatmap")
+```
+</div>
+
+<div class="week12_text">
+To train the classifier, 10 features from the corpera are utilized. Optimizing the classifier may involve reducing the number of features to enhance training efficiency. By employing a random forest model, the features that exert the greatest influence on the grouping of data points can be identified. Upon applying random forest to the corpera, the following order of features are observed, indicating their influence on data point groupings. Notably, track duration and tempo exhibit the highest influence, while acousticness, instrumentalness, and liveness demonstrate minimal impact on the groupings.
+</div>
+
+<div class="week12_figure">
+```{r, echo=FALSE}
+forest_model <-
+  rand_forest() |>
+  set_mode("classification") |> 
+  set_engine("ranger", importance = "impurity")
+indie_forest <- 
+  workflow() |> 
+  add_recipe(indie_recipe) |> 
+  add_model(forest_model) |> 
+  fit_resamples(
+    indie_cv, 
+    control = control_resamples(save_pred = TRUE)
+  )
+
+# indie_forest |> get_pr()
+
+workflow() |> 
+  add_recipe(indie_recipe) |> 
+  add_model(forest_model) |> 
+  fit(indie_features) |> 
+  pluck("fit", "fit", "fit") |>
+  ranger::importance() |> 
+  enframe() |> 
+  mutate(name = fct_reorder(name, value)) |> 
+  ggplot(aes(name, value)) + 
+  geom_col() + 
+  coord_flip() +
+  theme_minimal() +
+  labs(x = NULL, y = "Importance")
+```
+</div>
+
+<div class="week12_text">
+If the classifier is trained again on the corpara but instead only with the 'tempo' and 'duration' features, the following figure is obtained. What is interesting to notice here is that Microhouse now has a higer rate of True positives compared to Bass House and Tech House. For Bass House the precision and recall scores are now 0.77 and 0.85 (respectively), for Microhouse the precision and recall scores are 0.85 and 0.85 (respectively), and for Tech House the precision and recall scores are 0.83 and 0.75 (respectively).
+</div>
+
+<div class="week12_figure">
+```{r, echo=FALSE}
+indie <-
+  bind_rows(
+    bass_house |> mutate(playlist = "Bass House") |> slice_head(n = 20),
+    tech_house |> mutate(playlist = "Tech House") |> slice_head(n = 20),
+    microhouse |> mutate(playlist = "Microhouse") |> slice_head(n = 20)
+  ) |> 
+  add_audio_analysis()
+
+indie_features <-
+  indie |>  # For your portfolio, change this to the name of your corpus.
+  mutate(
+    playlist = factor(playlist),
+    segments = map2(segments, key, compmus_c_transpose),
+    pitches =
+      map(
+        segments,
+        compmus_summarise, pitches,
+        method = "mean", norm = "manhattan"
+      ),
+    timbre =
+      map(
+        segments,
+        compmus_summarise, timbre,
+        method = "mean",
+      )
+  ) |>
+  mutate(pitches = map(pitches, compmus_normalise, "clr")) |>
+  mutate_at(vars(pitches, timbre), map, bind_rows) |>
+  unnest(cols = c(pitches, timbre))
+
+indie_recipe <-
+  recipe(
+    playlist ~
+      tempo +
+      duration,
+    data = indie_features           # Use the same name as the previous block.
+  ) |>
+  step_center(all_predictors()) |>
+  step_scale(all_predictors())      # Converts to z-scores.
+  # step_range(all_predictors())    # Sets range to [0, 1].
+
+indie_cv <- indie_features |> vfold_cv(5)
+
+knn_model <-
+  nearest_neighbor(neighbors = 1) |>
+  set_mode("classification") |> 
+  set_engine("kknn")
+indie_knn <- 
+  workflow() |> 
+  add_recipe(indie_recipe) |> 
+  add_model(knn_model) |> 
+  fit_resamples(indie_cv, control = control_resamples(save_pred = TRUE))
+
+# indie_knn |> get_conf_mat()
+
+indie_knn |> get_conf_mat() |> autoplot(type = "heatmap")
+```
+</div>
+
+
+</div>
+
+Introduction {.intro-text}
+=====================================
+<div class="wrapper">
+<div class="headr">
+Introduction
+</div>
+<div class="text">
+The selected corpus encompasses three sub-genres: Bass House, Microhouse, and Tech House. Currently, it comprises 1127 tracks, with 153 tracks categorized as Bass House, 503 as Microhouse, and 441 as Electro House. These genres were chosen due to their ability to span a broad yet distinguishable range within the house music spectrum. The Bass House tracks are derived from compositions by Samuel Deep, Brawther, and Anil Aras, as well as from the Slapfunk label. This sub-genre emphasizes the lower spectrum of house music, characterized by powerful kicks, deep basslines, and rhythmic drums conducive to dancing. Microhouse, a sub-genre blending elements of techno with a slower tempo, features soft, cushiony kick-drums and a dreamy ambiance. The Microhouse tracks included in the corpus draw inspiration from compositions by Zip and Ricardo Villalobos, as well as releases from the Perlon label. The Tech House tracks included in the corpus are sourced from compositions by Mr C, Nathan Coles, and Buschwacka!, as well as releases from the Snatch Records label. Tech House is characterized as a fusion genre merging techno and house elements, featuring groove-driven beats, a minimalist approach, and the integration of technological sounds.
+
+The selected corpus closely aligns with my musical interests and expertise, although there are areas where uncertainties persist. As a passionate DJ and music producer with releases on Spotify (for those interested, my profile can be found at: https://open.spotify.com/artist/1ux6lrKnUuH8POcbD6TzpF?si=Uq9N_4n_QAGJC7MmYbxiMw), my focus lies predominantly within the realm of house music. House music, characterized by a diverse spectrum of genres akin to other musical forms, encompasses a multitude of intriguing niches, with distinctions evident across various elements such as arrangement, drum patterns, sampling techniques, and tempo. Particularly within underground house music, which diverges from mainstream popular culture to cater to devoted enthusiasts, the differentiation among these niches is pronounced. Originating in Chicago's underground club scene in the 1980s, underground house music swiftly gained traction in Europe, with the UK actively participating in its evolution. During those years, thousands of vinyl records were pressed, each release typically limited to a small number of copies owing to the niche nature of the genre. Countries such as Germany, Italy, The Netherlands, and Sweden swiftly embraced and enriched the underground house music scene. Even today, at parties and festivals, these vintage records seamlessly intertwine with contemporary releases, showcasing the timeless qualities of certain productions from earlier years. While the visible complexity within these niches is undeniable, discussions with fellow composers often center around the perceived simplicity of house music. The question arises: "Isn't house music merely a repetitive 4/4 drum beat coupled with a basic arrangement template (intro, buildup, outro)?" In my perspective, the answer lies in both affirmation and negation. While many tracks categorized as house music exhibit repetitiveness and adhere to a basic arrangement template, the vast distinctions across various musical elements within the niches of underground house music underscore the complexity inherent in the genre. In this research, I aim to utilize the Spotify API as a third party in this discourse, shedding new light on the discussion by providing insights into the intricacies of house music.
+
+
+The research examines the following main research question: 'How do the features extracted from the Spotify API contribute to understanding the extent of repetitiveness, complexity, and creative variation within House music as a genre?'. To address this question, the research is divided into several parts, each examining different aspects of music using the features provided by the Spotify API.
+</div>
+</div>
 
 Week 11
 =====================================
@@ -75,7 +320,7 @@ Row {.tabset .tabset-fade}
 Novelty Functions
 </div>
 <div class="text">
-These figures depict the Novelty Functions of three tracks within the corpus. I still can't really tell what Novelty Functions depict. If someone can help me on this it would be greatly appreciated. 
+These figures depict the Novelty Functions of three tracks within the corpus. I still can't really tell what Novelty Functions depict. If someone can help me on this it would be greatly appreciated.
 </div>
 
 <div class="figures">
@@ -208,24 +453,6 @@ graveola |>
 </div>
 </div>
 
-Introduction {.intro-text}
-=====================================
-<div class="wrapper">
-<div class="headr">
-Introduction
-</div>
-<div class="text">
-The selected corpus encompasses three sub-genres: Bass House, Microhouse, and Tech House. Currently, it comprises 1127 tracks, with 153 tracks categorized as Bass House, 503 as Microhouse, and 441 as Electro House. These genres were chosen due to their ability to span a broad yet distinguishable range within the house music spectrum. The Bass House tracks are derived from compositions by Samuel Deep, Brawther, and Anil Aras, as well as from the Slapfunk label. This sub-genre emphasizes the lower spectrum of house music, characterized by powerful kicks, deep basslines, and rhythmic drums conducive to dancing. Microhouse, a sub-genre blending elements of techno with a slower tempo, features soft, cushiony kick-drums and a dreamy ambiance. The Microhouse tracks included in the corpus draw inspiration from compositions by Zip and Ricardo Villalobos, as well as releases from the Perlon label. The Tech House tracks included in the corpus are sourced from compositions by Mr C, Nathan Coles, and Buschwacka!, as well as releases from the Snatch Records label. Tech House is characterized as a fusion genre merging techno and house elements, featuring groove-driven beats, a minimalist approach, and the integration of technological sounds.
-
-The selected corpus closely aligns with my musical interests and expertise, although there are areas where uncertainties persist. As a passionate DJ and music producer with releases on Spotify (for those interested, my profile can be found at: https://open.spotify.com/artist/1ux6lrKnUuH8POcbD6TzpF?si=Uq9N_4n_QAGJC7MmYbxiMw), my focus lies predominantly within the realm of house music. House music, characterized by a diverse spectrum of genres akin to other musical forms, encompasses a multitude of intriguing niches, with distinctions evident across various elements such as arrangement, drum patterns, sampling techniques, and tempo. Particularly within underground house music, which diverges from mainstream popular culture to cater to devoted enthusiasts, the differentiation among these niches is pronounced. Originating in Chicago's underground club scene in the 1980s, underground house music swiftly gained traction in Europe, with the UK actively participating in its evolution. During those years, thousands of vinyl records were pressed, each release typically limited to a small number of copies owing to the niche nature of the genre. Countries such as Germany, Italy, The Netherlands, and Sweden swiftly embraced and enriched the underground house music scene. Even today, at parties and festivals, these vintage records seamlessly intertwine with contemporary releases, showcasing the timeless qualities of certain productions from earlier years. While the visible complexity within these niches is undeniable, discussions with fellow composers often center around the perceived simplicity of house music. The question arises: "Isn't house music merely a repetitive 4/4 drum beat coupled with a basic arrangement template (intro, buildup, outro)?" In my perspective, the answer lies in both affirmation and negation. While many tracks categorized as house music exhibit repetitiveness and adhere to a basic arrangement template, the vast distinctions across various musical elements within the niches of underground house music underscore the complexity inherent in the genre. In this research, I aim to utilize the Spotify API as a third party in this discourse, shedding new light on the discussion by providing insights into the intricacies of house music.
-
-
-The research examines the following main research question: 'How do the features extracted from the Spotify API contribute to understanding the extent of repetitiveness, complexity, and creative variation within House music as a genre?'. To address this question, the research is divided into several parts, each examining different aspects of music using the features provided by the Spotify API.
-
-
-</div>
-</div>
-
 Week 10
 =====================================
 
@@ -234,7 +461,6 @@ Row {.tabset .tabset-fade}
 
 ### Chordograms
 <div class="wrapper">
-
 <div class="headr">
 Chordograms
 </div>
@@ -980,17 +1206,14 @@ Row {.tabset .tabset-fade}
 
 ### Cepstrograms
 <div class="wrapper">
-
 <div class="headr">
 Cepstrograms
 </div>
 <div class="text">
 These figures depict the cepstrograms of three tracks within the corpus. In the house track, a stable pattern is evident, with a noticeable build-up around 165 seconds. Towards the outro, there's a shift towards more percussion and less harmony. The minimal track exhibits constant fluctuations, attributed to its repetitive melody. Around 210 seconds, there's a discernible build-up primarily driven by percussion. In the electro track, clear repetitions are noticable, with the beginning of the track almost duplicated after 120 seconds, a common characteristic in electronic music.
 </div>
-
 <div class="figures">
 <div class="figure">
-
 ```{r, echo=FALSE}
 bzt_house <-
   get_tidy_audio_analysis("7HGVGFxjlifmvUpo4owTcL") |> # Change URI.
@@ -1029,9 +1252,7 @@ bzt_house |>
   theme_classic()
 ```
 </div>
-
 <div class="figure">
-
 ```{r, echo=FALSE}
 bzt_minimal <-
   get_tidy_audio_analysis("0UBLJwRvgy8Jhyo6jTXYZR") |> # Change URI.
@@ -1070,9 +1291,7 @@ bzt_minimal |>
   theme_classic()
 ```
 </div>
-
 <div class="figure">
-
 ```{r, echo=FALSE}
 bzt_electro <-
   get_tidy_audio_analysis("3gAVzxCCo8zNlZDYsseJq7") |> # Change URI.
@@ -1116,17 +1335,14 @@ bzt_electro |>
 
 ### Self-Similarity Matrices
 <div class="wrapper">
-
 <div class="headr">
 Self-Similarity Matrices
 </div>
 <div class="text">
 These figures display the Self-Similarity Matrices of three tracks within the corpus. In the house track, the build-up around 165 seconds is clearly visible. Additionally, numerous subtle changes are apparent, possibly indicating shifts in percussion, a characteristic of Julien Alexander's production style. In the minimal track, constant fluctuations are observed, stemming from its repetitive melody. The previously noted build-up around 210 seconds is less pronounced, but both the intro and outro are clearly depicted in this figure. In the electro track, the repetition in organization is evident.
 </div>
-
 <div class="figures">
 <div class="figure">
-
 ```{r, echo=FALSE}
 bzt_house |>
   compmus_self_similarity(timbre, "cosine") |>
@@ -1146,11 +1362,8 @@ bzt_house |>
   theme_classic() +
   labs(x = "", y = "")
 ```
-
 </div>
-
 <div class="figure">
-
 ```{r, echo=FALSE}
 bzt_minimal |>
   compmus_self_similarity(timbre, "cosine") |>
@@ -1170,11 +1383,8 @@ bzt_minimal |>
   theme_classic() +
   labs(x = "", y = "")
 ```
-
 </div>
-
 <div class="figure">
-
 ```{r, echo=FALSE}
 bzt_electro |>
   compmus_self_similarity(timbre, "cosine") |>
@@ -1194,7 +1404,6 @@ bzt_electro |>
   theme_classic() +
   labs(x = "", y = "")
 ```
-
 </div>
 </div>
 </div>
@@ -1208,15 +1417,14 @@ Row {.tabset .tabset-fade}
 
 ### Chromagrams
 <div class="wrapper">
-
 <div class="headr">
 Chromagrams
 </div>
 <div class="text">
 These figures present the chromagrams of three tracks from the corpus. In the house track, a less consistent pattern is noticeable, with clear changes in structure throughout the track. Two bridges and build-ups are evident, along with a longer outro compared to the intro. In the minimal track, a distinct static repetitive structure is visible, reaffirming the characteristic of minimal house music. Similarly, in the electro track, repetition is evident, with two bridges around 40 and 140 seconds, and an outro around 215 seconds that alters the energy of the track.
+</div>
 <div class="figures">
 <div class="figure">
-
 ```{r, echo=FALSE}
 wood <-
   get_tidy_audio_analysis("4R0lg0dcpePAao09jJFy0R") |>
@@ -1242,11 +1450,8 @@ wood |>
   theme_minimal() +
   scale_fill_viridis_c()
 ```
-
 </div>
-
 <div class="figure">
-
 ```{r, echo=FALSE}
 wood <-
   get_tidy_audio_analysis("49G8l1W2DTS6WyT6RBWKIO") |>
@@ -1272,11 +1477,8 @@ wood |>
   theme_minimal() +
   scale_fill_viridis_c()
 ```
-
 </div>
-
 <div class="figure">
-
 ```{r, echo=FALSE}
 wood <-
   get_tidy_audio_analysis("3wnf2NB94kYM9mYYekeqrY") |>
@@ -1302,24 +1504,20 @@ wood |>
   theme_minimal() +
   scale_fill_viridis_c()
 ```
-
 </div>
 </div>
 </div>
 
 ### Dynamic Time Warping
 <div class="wrapper">
-
 <div class="headr">
 Dynamic Time Warping
 </div>
 <div class="text">
 These visuals exhibit the dynamic time warping of three tracks from the corpus.
 </div>
-
 <div class="figures">
 <div class="figure">
-
 ```{r, echo=FALSE}
 ## Electro: Setaoc Mass - Disrepair
 setaoc <-
@@ -1356,11 +1554,8 @@ compmus_long_distance(
   theme_minimal() +
   scale_fill_viridis_c(guide = NULL)
 ```
-
 </div>
-
 <div class="figure">
-
 ```{r, echo=FALSE}
 ## Electro: Setaoc Mass - Disrepair
 setaoc <-
@@ -1397,11 +1592,8 @@ compmus_long_distance(
   theme_minimal() +
   scale_fill_viridis_c(guide = NULL)
 ```
-
 </div>
-
 <div class="figure">
-
 ```{r, echo=FALSE}
 ## Electro: Setaoc Mass - Disrepair
 setaoc <-
@@ -1438,7 +1630,6 @@ compmus_long_distance(
   theme_minimal() +
   scale_fill_viridis_c(guide = NULL)
 ```
-
 </div>
 </div>
 </div>
@@ -1452,20 +1643,18 @@ Row {.tabset .tabset-fade}
 
 ### Tempo analysis
 <div class="wrapper">
-
 <div class="headr">
 Tempo analysis
 </div>
 <div class="text">
 This figure depicts a boxplot with the x-axis representing the categories of the Corpus and the y-axis representing the tempo of the tracks in beats per minute (BPM). Notably, the tempo for the electro category surpasses that of the remaining categories. The mean tempo for electro is around 135 BPM, whereas for the other categories, it remains close to 125 BPM. Both categories exhibit tight clustering around their respective means. Additionally, the plots reveal the presence of outliers, underscoring the distinct stylistic attributes inherent to each genre. This observation representing to the unique characteristics defining the genres, offering valuable insights into their individual musical styles.
 </div>
-
 ```{r, echo=FALSE}
 categories <-
   bind_rows(
-    house |> mutate(category = "House"),
-    electro |> mutate(category = "Electro"),
-    minimal |> mutate(category = "Minimal")
+    bass_house |> mutate(category = "Bass House"),
+    microhouse |> mutate(category = "Microhouse"),
+    tech_house |> mutate(category = "Tech House")
   )
 
 categories |>
@@ -1473,10 +1662,8 @@ categories |>
   geom_violin()
 ```
 </div>
-
 ### Duration analysis
 <div class="wrapper">
-
 <div class="headr">
 Duration analysis
 </div>
@@ -1487,9 +1674,9 @@ This figure presents a boxplot, with the x-axis representing the categories of t
 ```{r, echo=FALSE}
  categories <-
    bind_rows(
-     house |> mutate(category = "House"),
-     electro |> mutate(category = "Electro"),
-     minimal |> mutate(category = "Minimal")
+     bass_house |> mutate(category = "Bass House"),
+     microhouse |> mutate(category = "Microhouse"),
+     tech_house |> mutate(category = "Tech House")
    )
 
  categories |>
