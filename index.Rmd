@@ -133,11 +133,11 @@ Introduction {.intro-text}
 Introduction
 </div>
 <div class="text">
-The selected corpus encompasses three sub-genres: Bass House, Microhouse, and Tech House. Currently, it comprises 1127 tracks, with 153 tracks categorized as Bass House, 503 as Microhouse, and 441 as Electro House. These genres were chosen due to their ability to span a broad yet distinguishable range within the house music spectrum. The Bass House tracks are derived from compositions by Samuel Deep, Brawther, and Anil Aras, as well as from the Slapfunk label. This sub-genre emphasizes the lower spectrum of house music, characterized by powerful kicks, deep basslines, and rhythmic drums conducive to dancing. Microhouse, a sub-genre blending elements of techno with a slower tempo, features soft, cushiony kick-drums and a dreamy ambiance. The Microhouse tracks included in the corpus draw inspiration from compositions by Zip and Ricardo Villalobos, as well as releases from the Perlon label. The Tech House tracks included in the corpus are sourced from compositions by Mr C, Nathan Coles, and Buschwacka!, as well as releases from the Snatch Records label. Tech House is characterized as a fusion genre merging techno and house elements, featuring groove-driven beats, a minimalist approach, and the integration of technological sounds.
+The selected corpus encompasses three sub-genres: Bass House, Microhouse, and Tech House. Currently, it comprises 128 tracks, with 63 tracks categorized as <a href="https://open.spotify.com/playlist/2QhCZhrEXekqb13nGvLpHr?si=60636996b7d540bf" target="_blank">Bass House</a>, 32 as <a href="https://open.spotify.com/playlist/71VZsDzDNSNpJluKcZ6x5Q?si=fca0039a5bb3437b" target="_blank">Microhouse</a>, and 33 as <a href="https://open.spotify.com/playlist/1XdDSaC9cfzSnPtZpesFsZ?si=b9696110dc9c41eb" target="_blank">Tech House</a>. These genres were chosen due to their ability to span a broad yet distinguishable range within the house music spectrum. The Bass House tracks are derived from compositions by Samuel Deep, Brawther, and Anil Aras. This sub-genre emphasizes the lower spectrum of house music, characterized by powerful kicks, deep basslines, and rhythmic drums conducive to dancing. Microhouse, a sub-genre blending elements of techno with a slower tempo, features soft, cushiony kick-drums and a dreamy ambiance. The Microhouse tracks included in the corpus draw inspiration from compositions by Zip and Ricardo Villalobos. The Tech House tracks included in the corpus are sourced from compositions by Mr C, Nathan Coles, and Buschwacka!. Tech House is characterized as a fusion genre merging techno and house elements, featuring groove-driven beats, a minimalist approach, and the integration of technological sounds. 
 
 <br>
 
-The selected corpus closely aligns with my musical interests and expertise, although there are areas where uncertainties persist. As a passionate DJ and music producer with releases on Spotify (for those interested, my profile can be found at: https://open.spotify.com/artist/1ux6lrKnUuH8POcbD6TzpF?si=Uq9N_4n_QAGJC7MmYbxiMw), my focus lies predominantly within the realm of house music. House music, characterized by a diverse spectrum of genres akin to other musical forms, encompasses a multitude of intriguing niches, with distinctions evident across various elements such as arrangement, drum patterns, sampling techniques, and tempo. Particularly within underground house music, which diverges from mainstream popular culture to cater to devoted enthusiasts, the differentiation among these niches is pronounced. Originating in Chicago's underground club scene in the 1980s, underground house music swiftly gained traction in Europe, with the UK actively participating in its evolution. During those years, thousands of vinyl records were pressed, each release typically limited to a small number of copies owing to the niche nature of the genre. Countries such as Germany, Italy, The Netherlands, and Sweden swiftly embraced and enriched the underground house music scene. Even today, at parties and festivals, these vintage records seamlessly intertwine with contemporary releases, showcasing the timeless qualities of certain productions from earlier years. While the visible complexity within these niches is undeniable, discussions with fellow composers often center around the perceived simplicity of house music. The question arises: "Isn't house music merely a repetitive 4/4 drum beat coupled with a basic arrangement template (intro, buildup, outro)?" In my perspective, the answer lies in both affirmation and negation. While many tracks categorized as house music exhibit repetitiveness and adhere to a basic arrangement template, the vast distinctions across various musical elements within the niches of underground house music underscore the complexity inherent in the genre. In this research, I aim to utilize the Spotify API as a third party in this discourse, shedding new light on the discussion by providing insights into the intricacies of house music.
+The selected corpus closely aligns with my musical interests and expertise. As a passionate DJ and music producer with <a href="https://open.spotify.com/artist/1ux6lrKnUuH8POcbD6TzpF?si=Uq9N_4n_QAGJC7MmYbxiMw" target="_blank">releases on Spotify</a>, my focus lies predominantly within the realm of house music. House music, characterized by a diverse spectrum of genres akin to other musical forms, encompasses a multitude of intriguing niches, with distinctions evident across various elements such as arrangement, drum patterns, sampling techniques, and tempo. Particularly within underground house music, which diverges from mainstream popular culture to cater to devoted enthusiasts, the differentiation among these niches is pronounced. Originating in Chicago's underground club scene in the 1980s, underground house music swiftly gained traction in Europe, with the UK actively participating in its evolution. During those years, thousands of vinyl records were pressed, each release typically limited to a small number of copies owing to the niche nature of the genre. Countries such as Germany, Italy, The Netherlands, and Sweden swiftly embraced and enriched the underground house music scene. Even today, at parties and festivals, these vintage records seamlessly intertwine with modern releases, showcasing the timeless qualities of certain productions from earlier years. While the complexity within these niches is undeniable, discussions with fellow composers often center around the perceived simplicity of house music. The question arises: "Isn't house music merely a repetitive 4/4 drum beat coupled with a basic arrangement template (intro, buildup, outro)?". In my perspective, the answer lies in both affirmation and negation. While many tracks categorized as house music exhibit repetitiveness and adhere to a basic arrangement template, the vast distinctions across various musical elements within the niches of underground house music underscore the complexity inherent in the genre. In this research, I aim to utilize the Spotify API as a third party in this discourse, shedding new light on the discussion by providing insights into the intricacies of house music.
 
 <br>
 
@@ -222,7 +222,7 @@ House music tracks often exhibit significant variations in BPM, which is underst
 
 <br>
 
-The violin plots below depict all tracks within the corpora of the sub-genres. It is evident that the Tech House genre encompasses tracks with a higher BPM compared to the other sub-genres. While both Bass House and Microhouse genres exhibit similar BPM ranges, Bass House tends to have a greater deviation towards higher BPM values, whereas Microhouse leans towards lower BPM values. Additionally, the variance of Tech House BPMs is notably higher than that of the other sub-genres. Tech House demonstrates a concentrated cluster around 133 BPM, while Microhouse hovers around 126 BPM and Bass House tends to center around 124 BPM.
+The violin plots below depict all tracks within the corpora of the sub-genres. It is evident that the Tech House genre encompasses tracks with a higher BPM compared to the other sub-genres. While both Bass House and Microhouse genres exhibit similar BPM ranges, Bass House tends to have a greater deviation towards higher BPM values, whereas Microhouse leans towards lower BPM values. Additionally, the variance of Tech House BPMs is notably higher than that of the other sub-genres. Tech House demonstrates a concentrated cluster around 133 BPM, while Microhouse hovers around 126 BPM and Bass House tends to center around 124 BPM. Therefore, it can be concluded that there are clear differences in tempo among these sub-genres.
 </div>
 
 <div class="figure_single">
@@ -302,7 +302,11 @@ House music has its roots in analogue signals and physical machines, where music
 
 <br>
 
-In the figure below, the release dates of tracks are plotted against their loudness values obtained from the Spotify API. It's evident that Tech House tracks released around 2001 exhibit lower loudness values compared to those released from 2014 onwards. The loudness of Microhouse tracks has remained relatively constant, although there are instances of tracks with lower loudness values, particularly in 2019. On the other hand, tracks from the Bass House genre show a consistent loudness level across releases, suggesting a uniformity in their sound profile from a specific starting point. 
+In the figure below, the release dates of tracks are plotted against their loudness values obtained from the Spotify API. It's evident that Tech House tracks released around 2001 exhibit lower loudness values compared to those released from 2014 onwards. The loudness of Microhouse tracks has remained relatively constant, although there are instances of tracks with lower loudness values, particularly in 2019. On the other hand, tracks from the Bass House genre show a consistent loudness level across releases, suggesting a uniformity in their sound profile from a specific starting point.
+
+<br>
+
+Analysis of the figures reveals a noticeable trend towards increased loudness in Tech House music. Conversely, the loudness of other sub-genres appears to remain relatively constant, which may partly be attributed to their respective release periods. It's worth noting that during the time period when these tracks were originally released, music production primarily involved DAWs and frequent mastering. Consequently, one could argue that House music, as a whole, has undergone a trend towards heightened loudness over time. It is also noteworthy that artists occasionally remaster their old music as part of the original project, re-releasing it on platforms like Spotify. This process often results in a noticeable increase in the loudness of the tracks. This could potentially explain the observed trend of increased loudness in Tech House tracks, especially those that have been recently released, as some of them may be remastered versions of older tracks. 
 </div>
 
 <div class="figure_single">
@@ -329,10 +333,6 @@ ggplot(combined_df, aes(x = track.album.release_date, y = loudness, color = cate
 Pitch
 =====================================
 
-Row {.tabset .tabset-fade}
--------------------------------------
-
-### Chromagrams
 <div class="wrapper">
 
 <div class="header_wrapper_single">
@@ -354,6 +354,10 @@ One characteristic of repetitiveness in music is the consistency of pitch within
 <br>
 
 The figures below illustrate a consistent pitch pattern observed across the tracks. Each track predominantly centers around a singular key, with some deviations. In the track by Samuel Deep, the focus is primarily on the notes C and B, with a shift to F# occurring approximately 180 seconds into the track. Priku's track centers around the key of D, with notable alterations occurring at 120, 270, and 350 seconds. Voigtman's track primarily revolves around the key of C#, with transitions to E occurring at approximately 180 and 210 seconds.
+
+<br>
+
+Upon analyzing the chromagrams, it can be observed that House tracks do not heavily rely on specific pitch classes. Furthermore, it is evident that there are discernible differences among sub-genres. Microhouse shows greater chord variation compared to Bass House and Tech House. These findings suggest that Microhouse is more flexible in chord structuring than other sub-genres. Thus, based on chroma features, there are notable differences in how sub-genres structure their chords within tracks. Consequently, it can be concluded that chroma features provide valuable insights into the chordal diversity across House music.
 </div>
 <div class="figures">
 <div class="figure">
@@ -569,34 +573,40 @@ wood |>
 
 Timbre Features
 =====================================
-
-Row {.tabset .tabset-fade}
--------------------------------------
-
-### Cepstrograms
+### Self-Similarity Matrices
 <div class="wrapper">
 
 <div class="header_wrapper_single">
 
 <div class="header_single">
-Cepstrograms
+Self-Similarity Matrices
 </div>
 
 <div class="header_question_single">
-<p><em>'To what extent can the tempo of House music be generalized?'</em></p>
+<p><em>'Does House music often show the same musical structure?'</em></p>
 <hr/>
 </div>
 
 </div>
 
 <div class="text">
-These figures depict the cepstrograms of three tracks within the corpus. In the house track, a stable pattern is evident, with a noticeable build-up around 165 seconds. Towards the outro, there's a shift towards more percussion and less harmony. The minimal track exhibits constant fluctuations, attributed to its repetitive melody. Around 210 seconds, there's a discernible build-up primarily driven by percussion. In the electro track, clear repetitions are noticable, with the beginning of the track almost duplicated after 120 seconds, a common characteristic in electronic music.
+
+Music frequently adheres to distinct structural frameworks, such as the sonata form, ternary form, or rondo form. In less mainstream genres, artists often have more freedom to experiment with alternative structures. The question arises: does this freedom extend to House music, or do its sub-genres exhibit repetitive musical structures? To investigate this, self-similarity matrices will be employed.
+
+<br>
+
+The figures below display the Self-Similarity Matrices of three tracks within the corpus based on their timbre features. In the Bass House track, a build-up around 155 seconds is visible. Additionally, numerous subtle changes are apparent, possibly indicating shifts in percussion, a characteristic of Stooge Wilson's production style. In the Microhouse track, constant fluctuations are observed, stemming from its repetitive melody. The previously noted build-up around 320 seconds is less pronounced, but both the intro is clearly depicted in this figure. In the Tech House track, the repetition in organization not evident, marking an experimental musical structure. Therefore it's popularity is more sparser, and people quickly see House music as one genre.
+
+<br>
+
+When comparing the matrices, a clear generalizable musical structure isn't evident. The matrices seem to display a more experimental structure, deviating from a standard Intro – Verse – Chorus – Verse – Chorus – Bridge – Chorus – Outro. Therefore, it can be concluded that House music deviates from predefined musical structures and allows for more experimental freedom.
+
 </div>
 <div class="figures">
 <div class="figure">
 ```{r, echo=FALSE}
-bzt_house <-
-  get_tidy_audio_analysis("7HGVGFxjlifmvUpo4owTcL") |> # Change URI.
+bzt_house2 <-
+  get_tidy_audio_analysis("30TlI5a7vVhqRiTGwOr7Gb") |> # Change URI.
   compmus_align(bars, segments) |>                     # Change `bars`
   select(bars) |>                                      #   in all three
   unnest(bars) |>                                      #   of these lines.
@@ -615,27 +625,29 @@ bzt_house <-
       )
   )
 
-bzt_house |>
-  compmus_gather_timbre() |>
+bzt_house2 |>
+  compmus_self_similarity(timbre, "cosine") |>
   ggplot(
     aes(
-      x = start + duration / 2,
-      width = duration,
-      y = basis,
-      fill = value
+      x = xstart + xduration / 2,
+      width = xduration,
+      y = ystart + yduration / 2,
+      height = yduration,
+      fill = d
     )
   ) +
   geom_tile() +
-  ggtitle("House: 'JANC1 - Julian Alexander'") +
-  labs(x = "Time (s)", y = NULL, fill = "Magnitude") +
-  scale_fill_viridis_c() +
-  theme_classic()
+  coord_fixed() +
+  ggtitle("Bass House: 'Stooge Wilson - Nxsty'") +
+  scale_fill_viridis_c(guide = "none") +
+  theme_classic() +
+  labs(x = "", y = "")
 ```
 </div>
 <div class="figure">
 ```{r, echo=FALSE}
-bzt_minimal <-
-  get_tidy_audio_analysis("0UBLJwRvgy8Jhyo6jTXYZR") |> # Change URI.
+bzt_minimal2 <-
+  get_tidy_audio_analysis("0hUMQoiYa1p0XgVmlCBcd0") |> # Change URI.
   compmus_align(bars, segments) |>                     # Change `bars`
   select(bars) |>                                      #   in all three
   unnest(bars) |>                                      #   of these lines.
@@ -654,27 +666,29 @@ bzt_minimal <-
       )
   )
 
-bzt_minimal |>
-  compmus_gather_timbre() |>
+bzt_minimal2 |>
+  compmus_self_similarity(timbre, "cosine") |>
   ggplot(
     aes(
-      x = start + duration / 2,
-      width = duration,
-      y = basis,
-      fill = value
+      x = xstart + xduration / 2,
+      width = xduration,
+      y = ystart + yduration / 2,
+      height = yduration,
+      fill = d
     )
   ) +
   geom_tile() +
-  ggtitle("Minimal: 'Tuesdays - Buschwacka!'") +
-  labs(x = "Time (s)", y = NULL, fill = "Magnitude") +
-  scale_fill_viridis_c() +
-  theme_classic()
+  coord_fixed() +
+  ggtitle("Microhouse: 'Korsakow - Make You Crazy'") +
+  scale_fill_viridis_c(guide = "none") +
+  theme_classic() +
+  labs(x = "", y = "")
 ```
 </div>
 <div class="figure">
 ```{r, echo=FALSE}
-bzt_electro <-
-  get_tidy_audio_analysis("3gAVzxCCo8zNlZDYsseJq7") |> # Change URI.
+bzt_electro2 <-
+  get_tidy_audio_analysis("7GNuJCJRlSpKxvyWwzalXt") |> # Change URI.
   compmus_align(bars, segments) |>                     # Change `bars`
   select(bars) |>                                      #   in all three
   unnest(bars) |>                                      #   of these lines.
@@ -693,21 +707,23 @@ bzt_electro <-
       )
   )
 
-bzt_electro |>
-  compmus_gather_timbre() |>
+bzt_electro2 |>
+  compmus_self_similarity(timbre, "cosine") |>
   ggplot(
     aes(
-      x = start + duration / 2,
-      width = duration,
-      y = basis,
-      fill = value
+      x = xstart + xduration / 2,
+      width = xduration,
+      y = ystart + yduration / 2,
+      height = yduration,
+      fill = d
     )
   ) +
   geom_tile() +
-  ggtitle("Electro: 'Disaffected - OS 11'") +
-  labs(x = "Time (s)", y = NULL, fill = "Magnitude") +
-  scale_fill_viridis_c() +
-  theme_classic()
+  coord_fixed() +
+  ggtitle("Tech House: 'Dexter - Fantasia'") +
+  scale_fill_viridis_c(guide = "none") +
+  theme_classic() +
+  labs(x = "", y = "")
 ```
 </div>
 </div>
@@ -719,92 +735,6 @@ Temporal Features
 Row {.tabset .tabset-fade}
 -------------------------------------
 
-### Self-Similarity Matrices
-<div class="wrapper">
-
-<div class="header_wrapper_single">
-
-<div class="header_single">
-Self-Similarity Matrices
-</div>
-
-<div class="header_question_single">
-<p><em>'To what extent can the tempo of House music be generalized?'</em></p>
-<hr/>
-</div>
-
-</div>
-
-<div class="text">
-These figures display the Self-Similarity Matrices of three tracks within the corpus. In the house track, the build-up around 165 seconds is clearly visible. Additionally, numerous subtle changes are apparent, possibly indicating shifts in percussion, a characteristic of Julien Alexander's production style. In the minimal track, constant fluctuations are observed, stemming from its repetitive melody. The previously noted build-up around 210 seconds is less pronounced, but both the intro and outro are clearly depicted in this figure. In the electro track, the repetition in organization is evident.
-</div>
-<div class="figures">
-<div class="figure">
-```{r, echo=FALSE}
-bzt_house |>
-  compmus_self_similarity(timbre, "cosine") |>
-  ggplot(
-    aes(
-      x = xstart + xduration / 2,
-      width = xduration,
-      y = ystart + yduration / 2,
-      height = yduration,
-      fill = d
-    )
-  ) +
-  geom_tile() +
-  coord_fixed() +
-  ggtitle("House: 'JANC1 - Julian Alexander'") +
-  scale_fill_viridis_c(guide = "none") +
-  theme_classic() +
-  labs(x = "", y = "")
-```
-</div>
-<div class="figure">
-```{r, echo=FALSE}
-bzt_minimal |>
-  compmus_self_similarity(timbre, "cosine") |>
-  ggplot(
-    aes(
-      x = xstart + xduration / 2,
-      width = xduration,
-      y = ystart + yduration / 2,
-      height = yduration,
-      fill = d
-    )
-  ) +
-  geom_tile() +
-  coord_fixed() +
-  ggtitle("Minimal: 'Tuesdays - Buschwacka!'") +
-  scale_fill_viridis_c(guide = "none") +
-  theme_classic() +
-  labs(x = "", y = "")
-```
-</div>
-<div class="figure">
-```{r, echo=FALSE}
-bzt_electro |>
-  compmus_self_similarity(timbre, "cosine") |>
-  ggplot(
-    aes(
-      x = xstart + xduration / 2,
-      width = xduration,
-      y = ystart + yduration / 2,
-      height = yduration,
-      fill = d
-    )
-  ) +
-  geom_tile() +
-  coord_fixed() +
-  ggtitle("Electro: 'Disaffected - OS 11'") +
-  scale_fill_viridis_c(guide = "none") +
-  theme_classic() +
-  labs(x = "", y = "")
-```
-</div>
-</div>
-</div>
-
 ### Novelty Functions
 <div class="wrapper">
 
@@ -815,77 +745,84 @@ Novelty Functions
 </div>
 
 <div class="header_question_single">
-<p><em>'To what extent do chroma features offer insights into the chordal diversity across House music'</em></p>
+<p><em>'How accurately is house music's consistent beat perception reflected in the actual frequency of energy shifts within tracks?'</em></p>
 <hr/>
 </div>
 
 </div>
 
 <div class="text">
-These figures depict the Novelty Functions of three tracks within the corpus. I still can't really tell what Novelty Functions depict. If someone can help me on this it would be greatly appreciated.
+House music is often characterized by a consistent beat that persists throughout the entire track. However, is this characterization accurate, or does the genre contain more frequent shifts in energy than commonly perceived? One way to analyze this is by examining the novelty of a track. Using the Spotify API, the loudness of each track can be obtained, providing insight into its novelty.
+
+<br>
+
+In the figures below, Novelty Functions for one track from each of the sub-genres are plotted. Larry de Kat's track exhibits several novelty spikes but generally maintains lower novelty compared to the other tracks. Tom Ellis's track demonstrates more frequent and higher novelty peaks throughout its duration. Similarly, Nathan Coles's track also exhibits frequent peaks, albeit with slightly lower intensity.
+
+<br>
+The novelty function indicates a level of variation in loudness across the figures. However, there are some doubts regarding the representativeness of the novelty functions. Upon personally listening to the tracks, I struggle to align my experience with the notion of constant novelty in loudness as suggested by the figures.
 </div>
 
 <div class="figures">
 <div class="figure">
 
 ```{r, echo=FALSE}
-# pata_pata <-
-#   get_tidy_audio_analysis("4uAxqp5rBBvm6eKXuAavIZ") |>
-#   select(segments) |>
-#   unnest(segments)
-# 
-# pata_pata |>
-#   mutate(loudness_max_time = start + loudness_max_time) |>
-#   arrange(loudness_max_time) |>
-#   mutate(delta_loudness = loudness_max - lag(loudness_max)) |>
-#   ggplot(aes(x = loudness_max_time, y = pmax(0, delta_loudness))) +
-#   ggtitle("Bass House: 'Larry de Kat - Def Joint'") +
-#   geom_line() +
-#   xlim(0, 30) +
-#   theme_minimal() +
-#   labs(x = "Time (s)", y = "Novelty")
+pata_pata <-
+  get_tidy_audio_analysis("4uAxqp5rBBvm6eKXuAavIZ") |>
+  select(segments) |>
+  unnest(segments)
+
+pata_pata |>
+  mutate(loudness_max_time = start + loudness_max_time) |>
+  arrange(loudness_max_time) |>
+  mutate(delta_loudness = loudness_max - lag(loudness_max)) |>
+  ggplot(aes(x = loudness_max_time, y = pmax(0, delta_loudness))) +
+  ggtitle("Bass House: 'Larry de Kat - Def Joint'") +
+  geom_line() +
+  xlim(0, 30) +
+  theme_minimal() +
+  labs(x = "Time (s)", y = "Novelty")
 ```
 </div>
 
 <div class="figure">
 
 ```{r, echo=FALSE}
-# pata_pata <-
-#   get_tidy_audio_analysis("470lb3XFRIOFT7pb19fKni") |>
-#   select(segments) |>
-#   unnest(segments)
-# 
-# pata_pata |>
-#   mutate(loudness_max_time = start + loudness_max_time) |>
-#   arrange(loudness_max_time) |>
-#   mutate(delta_loudness = loudness_max - lag(loudness_max)) |>
-#   ggplot(aes(x = loudness_max_time, y = pmax(0, delta_loudness))) +
-#   ggtitle("Microhouse: 'Tom Ellis - Yah Yah'") +
-#   geom_line() +
-#   xlim(0, 30) +
-#   theme_minimal() +
-#   labs(x = "Time (s)", y = "Novelty")
+pata_pata <-
+  get_tidy_audio_analysis("470lb3XFRIOFT7pb19fKni") |>
+  select(segments) |>
+  unnest(segments)
+
+pata_pata |>
+  mutate(loudness_max_time = start + loudness_max_time) |>
+  arrange(loudness_max_time) |>
+  mutate(delta_loudness = loudness_max - lag(loudness_max)) |>
+  ggplot(aes(x = loudness_max_time, y = pmax(0, delta_loudness))) +
+  ggtitle("Microhouse: 'Tom Ellis - Yah Yah'") +
+  geom_line() +
+  xlim(0, 30) +
+  theme_minimal() +
+  labs(x = "Time (s)", y = "Novelty")
 ```
 </div>
 
 <div class="figure">
 
 ```{r, echo=FALSE}
-# pata_pata <-
-#   get_tidy_audio_analysis("7LHbSCq1bnwfAdeAvTtHgA") |>
-#   select(segments) |>
-#   unnest(segments)
-# 
-# pata_pata |>
-#   mutate(loudness_max_time = start + loudness_max_time) |>
-#   arrange(loudness_max_time) |>
-#   mutate(delta_loudness = loudness_max - lag(loudness_max)) |>
-#   ggplot(aes(x = loudness_max_time, y = pmax(0, delta_loudness))) +
-#   ggtitle("Tech House: 'Nathan Coles - Hide & Seek'") +
-#   geom_line() +
-#   xlim(0, 30) +
-#   theme_minimal() +
-#   labs(x = "Time (s)", y = "Novelty")
+pata_pata <-
+  get_tidy_audio_analysis("7LHbSCq1bnwfAdeAvTtHgA") |>
+  select(segments) |>
+  unnest(segments)
+
+pata_pata |>
+  mutate(loudness_max_time = start + loudness_max_time) |>
+  arrange(loudness_max_time) |>
+  mutate(delta_loudness = loudness_max - lag(loudness_max)) |>
+  ggplot(aes(x = loudness_max_time, y = pmax(0, delta_loudness))) +
+  ggtitle("Tech House: 'Nathan Coles - Hide & Seek'") +
+  geom_line() +
+  xlim(0, 30) +
+  theme_minimal() +
+  labs(x = "Time (s)", y = "Novelty")
 ```
 </div>
 </div>
@@ -987,75 +924,75 @@ Chromagrams
 </div>
 
 <div class="text_single">
-Another interesting approach to explore potential differences among the three sub-genres is by assessing whether a model can successfully differentiate between them. If the model shows the ability to distinguish between the sub-genres, it provides further significance to the research question. The model to be utilized is a classifier known as k-nearest neighbors (KNN). This algorithm operates as a supervised learning classifier, predicting the classification of individual data points. To adapt KNN for investigating potential differences among the sub-genres, the tracks within the corpora are represented as data points, with the three sub-genres representing distinct groupings. To train the KNN, the data points are divided into two groups: training data and test data. Since the classifier is trained on the labeled training data, which already defines the grouping of each data point, KNN operates as a supervised algorithm. After training the model, the model will make its predictions on the test data. Based on these predictions, several key metrics are established to evaluate the model's performance. True Positive (TP) indicates the correct classification of positive instances, False Positive (FP) indicates the incorrect classification of negative instances, True Negative (TN) indicates the correct classification of negative instances, and False Negative (FN) indicates the incorrect of positive instances. These metrics serve as vital tools in assessing the accuracy and effectiveness of KNN classification, offering insights into where the model may flucuate in its predictions. After training the KNN classifier on the corpora, the following predictions are made. When looking at the diagonal line in the figure there can be seen that model is able to make correct predictions. A clearer distinction between Bass House and Tech House can be seen compared to Microhouse. Microhouse has 14 True positives whereas Bass House and Tech House have 16 and 17 tracks, respectively. For Bass House the precision and recall scores are 0.86 and 0.90 (respectively), for Microhouse the precision and recall scores are 0.83 and 0.75 (respectively), and for Tech House the precision and recall scores are 0.81 and 0.85 (respectively).
+Another interesting approach to explore potential differences among the three sub-genres is by assessing whether a model can successfully differentiate between them. If the model shows the ability to distinguish between the sub-genres, it provides further significance to the research question. The model to be utilized is a classifier known as k-nearest neighbors (KNN). This algorithm operates as a supervised learning classifier, predicting the classification of individual data points. To adapt KNN for investigating potential differences among the sub-genres, the tracks within the corpora are represented as data points, with the three sub-genres representing distinct groupings. To train the KNN, the data points are divided into two groups: training data and test data. Since the classifier is trained on the labeled training data, which already defines the grouping of each data point, KNN operates as a supervised algorithm. After training the model, the model will make its predictions on the test data. Based on these predictions, several key metrics are established to evaluate the model's performance. True Positive (TP) indicates the correct classification of positive instances, False Positive (FP) indicates the incorrect classification of negative instances, True Negative (TN) indicates the correct classification of negative instances, and False Negative (FN) indicates the incorrect of positive instances. These metrics serve as vital tools in assessing the accuracy and effectiveness of KNN classification, offering insights into where the model may flucuate in its predictions. After training the KNN classifier on the corpora, the following predictions are made. When looking at the diagonal line in the figure there can be seen that model is able to make correct predictions. A clearer distinction between Bass House and Tech House can be seen compared to Microhouse. Microhouse has 6 True positives whereas Bass House and Tech House have 6 and 9 tracks, respectively. For Bass House the precision and recall scores are 0.86 and 0.90 (respectively), for Microhouse the precision and recall scores are 0.83 and 0.75 (respectively), and for Tech House the precision and recall scores are 0.81 and 0.85 (respectively).
 </div>
 
 <div class="figure_single">
 ```{r, echo=FALSE}
-# indie <-
-#   bind_rows(
-#     bass_house |> mutate(playlist = "Bass House") |> slice_head(n = 20),
-#     tech_house |> mutate(playlist = "Tech House") |> slice_head(n = 20),
-#     microhouse |> mutate(playlist = "Microhouse") |> slice_head(n = 20)
-#   ) |> 
-#   add_audio_analysis()
-# 
-# indie_features <-
-#   indie |>  # For your portfolio, change this to the name of your corpus.
-#   mutate(
-#     playlist = factor(playlist),
-#     segments = map2(segments, key, compmus_c_transpose),
-#     pitches =
-#       map(
-#         segments,
-#         compmus_summarise, pitches,
-#         method = "mean", norm = "manhattan"
-#       ),
-#     timbre =
-#       map(
-#         segments,
-#         compmus_summarise, timbre,
-#         method = "mean",
-#       )
-#   ) |>
-#   mutate(pitches = map(pitches, compmus_normalise, "clr")) |>
-#   mutate_at(vars(pitches, timbre), map, bind_rows) |>
-#   unnest(cols = c(pitches, timbre))
-# 
-# indie_recipe <-
-#   recipe(
-#     playlist ~
-#       danceability +
-#       energy +
-#       loudness +
-#       speechiness +
-#       acousticness +
-#       instrumentalness +
-#       liveness +
-#       valence +
-#       tempo +
-#       duration,
-#     data = indie_features           # Use the same name as the previous block.
-#   ) |>
-#   step_center(all_predictors()) |>
-#   step_scale(all_predictors())      # Converts to z-scores.
-#   # step_range(all_predictors())    # Sets range to [0, 1].
-# 
-# indie_cv <- indie_features |> vfold_cv(5)
-# 
-# knn_model <-
-#   nearest_neighbor(neighbors = 1) |>
-#   set_mode("classification") |> 
-#   set_engine("kknn")
-# indie_knn <- 
-#   workflow() |> 
-#   add_recipe(indie_recipe) |> 
-#   add_model(knn_model) |> 
-#   fit_resamples(indie_cv, control = control_resamples(save_pred = TRUE))
-# 
-# # indie_knn |> get_conf_mat()
-# 
-# indie_knn |> get_conf_mat() |> autoplot(type = "heatmap")
+indie <-
+  bind_rows(
+    bass_house |> mutate(playlist = "Bass House") |> slice_head(n = 10),
+    tech_house |> mutate(playlist = "Tech House") |> slice_head(n = 10),
+    microhouse |> mutate(playlist = "Microhouse") |> slice_head(n = 10)
+  ) |>
+  add_audio_analysis()
+
+indie_features <-
+  indie |>  # For your portfolio, change this to the name of your corpus.
+  mutate(
+    playlist = factor(playlist),
+    segments = map2(segments, key, compmus_c_transpose),
+    pitches =
+      map(
+        segments,
+        compmus_summarise, pitches,
+        method = "mean", norm = "manhattan"
+      ),
+    timbre =
+      map(
+        segments,
+        compmus_summarise, timbre,
+        method = "mean",
+      )
+  ) |>
+  mutate(pitches = map(pitches, compmus_normalise, "clr")) |>
+  mutate_at(vars(pitches, timbre), map, bind_rows) |>
+  unnest(cols = c(pitches, timbre))
+
+indie_recipe <-
+  recipe(
+    playlist ~
+      danceability +
+      energy +
+      loudness +
+      speechiness +
+      acousticness +
+      instrumentalness +
+      liveness +
+      valence +
+      tempo +
+      duration,
+    data = indie_features           # Use the same name as the previous block.
+  ) |>
+  step_center(all_predictors()) |>
+  step_scale(all_predictors())      # Converts to z-scores.
+  # step_range(all_predictors())    # Sets range to [0, 1].
+
+indie_cv <- indie_features |> vfold_cv(5)
+
+knn_model <-
+  nearest_neighbor(neighbors = 1) |>
+  set_mode("classification") |>
+  set_engine("kknn")
+indie_knn <-
+  workflow() |>
+  add_recipe(indie_recipe) |>
+  add_model(knn_model) |>
+  fit_resamples(indie_cv, control = control_resamples(save_pred = TRUE))
+
+# indie_knn |> get_conf_mat()
+
+indie_knn |> get_conf_mat() |> autoplot(type = "heatmap")
 ```
 </div>
 
@@ -1065,34 +1002,34 @@ To train the classifier, 10 features from the corpera are utilized. Optimizing t
 
 <div class="figure_single">
 ```{r, echo=FALSE}
-# forest_model <-
-#   rand_forest() |>
-#   set_mode("classification") |> 
-#   set_engine("ranger", importance = "impurity")
-# indie_forest <- 
-#   workflow() |> 
-#   add_recipe(indie_recipe) |> 
-#   add_model(forest_model) |> 
-#   fit_resamples(
-#     indie_cv, 
-#     control = control_resamples(save_pred = TRUE)
-#   )
-# 
-# # indie_forest |> get_pr()
-# 
-# workflow() |> 
-#   add_recipe(indie_recipe) |> 
-#   add_model(forest_model) |> 
-#   fit(indie_features) |> 
-#   pluck("fit", "fit", "fit") |>
-#   ranger::importance() |> 
-#   enframe() |> 
-#   mutate(name = fct_reorder(name, value)) |> 
-#   ggplot(aes(name, value)) + 
-#   geom_col() + 
-#   coord_flip() +
-#   theme_minimal() +
-#   labs(x = NULL, y = "Importance")
+forest_model <-
+  rand_forest() |>
+  set_mode("classification") |>
+  set_engine("ranger", importance = "impurity")
+indie_forest <-
+  workflow() |>
+  add_recipe(indie_recipe) |>
+  add_model(forest_model) |>
+  fit_resamples(
+    indie_cv,
+    control = control_resamples(save_pred = TRUE)
+  )
+
+# indie_forest |> get_pr()
+
+workflow() |>
+  add_recipe(indie_recipe) |>
+  add_model(forest_model) |>
+  fit(indie_features) |>
+  pluck("fit", "fit", "fit") |>
+  ranger::importance() |>
+  enframe() |>
+  mutate(name = fct_reorder(name, value)) |>
+  ggplot(aes(name, value)) +
+  geom_col() +
+  coord_flip() +
+  theme_minimal() +
+  labs(x = NULL, y = "Importance")
 ```
 </div>
 
@@ -1102,62 +1039,62 @@ If the classifier is trained again on the corpara but instead only with the 'tem
 
 <div class="figure_single">
 ```{r, echo=FALSE}
-# indie <-
-#   bind_rows(
-#     bass_house |> mutate(playlist = "Bass House") |> slice_head(n = 20),
-#     tech_house |> mutate(playlist = "Tech House") |> slice_head(n = 20),
-#     microhouse |> mutate(playlist = "Microhouse") |> slice_head(n = 20)
-#   ) |> 
-#   add_audio_analysis()
-# 
-# indie_features <-
-#   indie |>  # For your portfolio, change this to the name of your corpus.
-#   mutate(
-#     playlist = factor(playlist),
-#     segments = map2(segments, key, compmus_c_transpose),
-#     pitches =
-#       map(
-#         segments,
-#         compmus_summarise, pitches,
-#         method = "mean", norm = "manhattan"
-#       ),
-#     timbre =
-#       map(
-#         segments,
-#         compmus_summarise, timbre,
-#         method = "mean",
-#       )
-#   ) |>
-#   mutate(pitches = map(pitches, compmus_normalise, "clr")) |>
-#   mutate_at(vars(pitches, timbre), map, bind_rows) |>
-#   unnest(cols = c(pitches, timbre))
-# 
-# indie_recipe <-
-#   recipe(
-#     playlist ~
-#       tempo +
-#       duration,
-#     data = indie_features           # Use the same name as the previous block.
-#   ) |>
-#   step_center(all_predictors()) |>
-#   step_scale(all_predictors())      # Converts to z-scores.
-#   # step_range(all_predictors())    # Sets range to [0, 1].
-# 
-# indie_cv <- indie_features |> vfold_cv(5)
-# 
-# knn_model <-
-#   nearest_neighbor(neighbors = 1) |>
-#   set_mode("classification") |> 
-#   set_engine("kknn")
-# indie_knn <- 
-#   workflow() |> 
-#   add_recipe(indie_recipe) |> 
-#   add_model(knn_model) |> 
-#   fit_resamples(indie_cv, control = control_resamples(save_pred = TRUE))
-# 
-# # indie_knn |> get_conf_mat()
-# 
-# indie_knn |> get_conf_mat() |> autoplot(type = "heatmap")
+indie <-
+  bind_rows(
+    bass_house |> mutate(playlist = "Bass House") |> slice_head(n = 10),
+    tech_house |> mutate(playlist = "Tech House") |> slice_head(n = 10),
+    microhouse |> mutate(playlist = "Microhouse") |> slice_head(n = 10)
+  ) |>
+  add_audio_analysis()
+
+indie_features <-
+  indie |>  # For your portfolio, change this to the name of your corpus.
+  mutate(
+    playlist = factor(playlist),
+    segments = map2(segments, key, compmus_c_transpose),
+    pitches =
+      map(
+        segments,
+        compmus_summarise, pitches,
+        method = "mean", norm = "manhattan"
+      ),
+    timbre =
+      map(
+        segments,
+        compmus_summarise, timbre,
+        method = "mean",
+      )
+  ) |>
+  mutate(pitches = map(pitches, compmus_normalise, "clr")) |>
+  mutate_at(vars(pitches, timbre), map, bind_rows) |>
+  unnest(cols = c(pitches, timbre))
+
+indie_recipe <-
+  recipe(
+    playlist ~
+      tempo +
+      duration,
+    data = indie_features           # Use the same name as the previous block.
+  ) |>
+  step_center(all_predictors()) |>
+  step_scale(all_predictors())      # Converts to z-scores.
+  # step_range(all_predictors())    # Sets range to [0, 1].
+
+indie_cv <- indie_features |> vfold_cv(5)
+
+knn_model <-
+  nearest_neighbor(neighbors = 1) |>
+  set_mode("classification") |>
+  set_engine("kknn")
+indie_knn <-
+  workflow() |>
+  add_recipe(indie_recipe) |>
+  add_model(knn_model) |>
+  fit_resamples(indie_cv, control = control_resamples(save_pred = TRUE))
+
+# indie_knn |> get_conf_mat()
+
+indie_knn |> get_conf_mat() |> autoplot(type = "heatmap")
 ```
 </div>
 
@@ -1175,25 +1112,19 @@ Conclusion {.intro-text}
 Conclusion
 </div>
 <div class="text">
-The selected corpus encompasses three sub-genres: Bass House, Microhouse, and Tech House. Currently, it comprises 1127 tracks, with 153 tracks categorized as Bass House, 503 as Microhouse, and 441 as Electro House. These genres were chosen due to their ability to span a broad yet distinguishable range within the house music spectrum. The Bass House tracks are derived from compositions by Samuel Deep, Brawther, and Anil Aras, as well as from the Slapfunk label. This sub-genre emphasizes the lower spectrum of house music, characterized by powerful kicks, deep basslines, and rhythmic drums conducive to dancing. Microhouse, a sub-genre blending elements of techno with a slower tempo, features soft, cushiony kick-drums and a dreamy ambiance. The Microhouse tracks included in the corpus draw inspiration from compositions by Zip and Ricardo Villalobos, as well as releases from the Perlon label. The Tech House tracks included in the corpus are sourced from compositions by Mr C, Nathan Coles, and Buschwacka!, as well as releases from the Snatch Records label. Tech House is characterized as a fusion genre merging techno and house elements, featuring groove-driven beats, a minimalist approach, and the integration of technological sounds.
+The analysis of various sub-genres within House music reveals distinct trends across different features. Microhouse tracks consistently show lower valence levels compared to others, while Tech House stands out with a higher BPM range and greater variability. Additionally, Microhouse tracks tend to have longer durations with higher variability, contrasting with the condensed nature of Bass House. A noticeable trend towards increased loudness is observed in Tech House, possibly due to remastering practices, while other sub-genres maintain relatively constant loudness levels. House music's deviation from predefined musical structures allows for experimental freedom, reflected in the data's lack of clear generalizable patterns. Doubts arise regarding the representativeness of novelty functions, indicating potential discrepancies between data analysis and subjective listening experience. Furthermore, House music generally maintains a stable tempo, with slight variations detected, especially in Bass House tracks. Utilizing a random forest model, features like track duration and tempo exert the most influence on data grouping, highlighting the diverse characteristics of different House music sub-genres across multiple dimensions and contributing to a deeper understanding of the genre's nuances.
 
 <br>
 
-The selected corpus closely aligns with my musical interests and expertise, although there are areas where uncertainties persist. As a passionate DJ and music producer with releases on Spotify (for those interested, my profile can be found at: https://open.spotify.com/artist/1ux6lrKnUuH8POcbD6TzpF?si=Uq9N_4n_QAGJC7MmYbxiMw), my focus lies predominantly within the realm of house music. House music, characterized by a diverse spectrum of genres akin to other musical forms, encompasses a multitude of intriguing niches, with distinctions evident across various elements such as arrangement, drum patterns, sampling techniques, and tempo. Particularly within underground house music, which diverges from mainstream popular culture to cater to devoted enthusiasts, the differentiation among these niches is pronounced. Originating in Chicago's underground club scene in the 1980s, underground house music swiftly gained traction in Europe, with the UK actively participating in its evolution. During those years, thousands of vinyl records were pressed, each release typically limited to a small number of copies owing to the niche nature of the genre. Countries such as Germany, Italy, The Netherlands, and Sweden swiftly embraced and enriched the underground house music scene. Even today, at parties and festivals, these vintage records seamlessly intertwine with contemporary releases, showcasing the timeless qualities of certain productions from earlier years. While the visible complexity within these niches is undeniable, discussions with fellow composers often center around the perceived simplicity of house music. The question arises: "Isn't house music merely a repetitive 4/4 drum beat coupled with a basic arrangement template (intro, buildup, outro)?" In my perspective, the answer lies in both affirmation and negation. While many tracks categorized as house music exhibit repetitiveness and adhere to a basic arrangement template, the vast distinctions across various musical elements within the niches of underground house music underscore the complexity inherent in the genre. In this research, I aim to utilize the Spotify API as a third party in this discourse, shedding new light on the discussion by providing insights into the intricacies of house music.
+These findings suggest that the Spotify API contributes significantly to the discourse by providing valuable information on all the tracks in the corpus. Based on its findings, one could argue that House music transcends the typical 4x4 beat and encompasses deeper layers, although this may not apply universally across all House music. This portfolio has only considered three sub-genres of House music, yet there are numerous other sub-genres. Additionally, the corpus contains only a small percentage of tracks representing these sub-genres. However, a notable aspect of this corpus is that many tracks setting the foundation for its characteristics are primarily available on vinyl and not on Spotify. While some tracks have been remastered, this does not fully address this limitation.
 
 <br>
 
-The research examines the following main research question: 'How do the features extracted from the Spotify API contribute to understanding the extent of repetitiveness, complexity, and creative variation within House music as a genre?'. To address this question, the research is divided into several parts, each examining different aspects of music using the features provided by the Spotify API.
+Another important aspect of House music is its primary purpose: to be experienced on the dancefloor rather than being repeatedly streamed on headphones. On the dancefloors, DJs aim to convey a narrative through their track selection rather than compiling a diverse playlist. DJs in this realm meticulously curate their record collections for their DJ mixes, showcasing them selectively. Unlike Spotify, there isn't an algorithm in the House music scene that recommends new tracks based on listening history or co-listeners.
 
+<br>
 
-
-
-loudness
-What is a good thing to note is that sometimes old music is being remastered by its artist in the original project, and re-released again on Spotify. This also suggests a new boost in the loudness of the tracks, which could be a clarification for growth in loudness for the Tech House tracks which show a icnrease in loudness in the recently released tracks since some of them are remastered tracks
-
-
-chromagrams pitch
-Upon analyzing the chromagrams, it can be observed that House tracks do not heavily rely on specific pitch classes. Furthermore, it is evident that there are discernible differences among sub-genres. Microhouse shows greater chord variation compared to Bass House and Tech House. These findings suggest that Microhouse is more flexible in chord structuring than other sub-genres. Thus, based on chroma features, there are notable differences in how sub-genres structure their chords within tracks.
+In conclusion, the examination of underground House music may present challenges due to its exclusivity. However, despite this, insights about the genre were still obtained through the availability of current remasters on Spotify. Is underground House music more than a typical 4x4 beat? Undoubtedly, from the analysis and also supported by data from the Spotify API. And when you are still not convinced, you should come to the dance floor once.
 
 </div>
 </div>
@@ -1201,765 +1132,885 @@ Upon analyzing the chromagrams, it can be observed that House tracks do not heav
 
 Irrelevant figures{.intro-text}
 =====================================
+
+Row {.tabset .tabset-fade}
+-------------------------------------
+
+### Cepstrograms
+<div class="wrapper">
+
+<div class="header_wrapper_single">
+
+<div class="header_single">
+Cepstrograms
+</div>
+
+<div class="header_question_single">
+<p><em></em></p>
+<hr/>
+</div>
+
+</div>
+
+<div class="text">
+These figures depict the cepstrograms of three tracks within the corpus. They didn't seem compelling for this portfolio.
+</div>
+<div class="figures">
+<div class="figure">
+```{r, echo=FALSE}
+bzt_house <-
+  get_tidy_audio_analysis("2UYmW0F3ZvdplGyz2ZWH9N") |> # Change URI.
+  compmus_align(bars, segments) |>                     # Change `bars`
+  select(bars) |>                                      #   in all three
+  unnest(bars) |>                                      #   of these lines.
+  mutate(
+    pitches =
+      map(segments,
+        compmus_summarise, pitches,
+        method = "rms", norm = "euclidean"              # Change summary & norm.
+      )
+  ) |>
+  mutate(
+    timbre =
+      map(segments,
+        compmus_summarise, timbre,
+        method = "rms", norm = "euclidean"              # Change summary & norm.
+      )
+  )
+
+bzt_house |>
+  compmus_gather_timbre() |>
+  ggplot(
+    aes(
+      x = start + duration / 2,
+      width = duration,
+      y = basis,
+      fill = value
+    )
+  ) +
+  geom_tile() +
+  ggtitle("Bass House: 'Locklead - Keep Going'") +
+  labs(x = "Time (s)", y = NULL, fill = "Magnitude") +
+  scale_fill_viridis_c() +
+  theme_classic()
+```
+</div>
+<div class="figure">
+```{r, echo=FALSE}
+bzt_minimal <-
+  get_tidy_audio_analysis("596xBkksPNU9VYgBeC6jND") |> # Change URI.
+  compmus_align(bars, segments) |>                     # Change `bars`
+  select(bars) |>                                      #   in all three
+  unnest(bars) |>                                      #   of these lines.
+  mutate(
+    pitches =
+      map(segments,
+        compmus_summarise, pitches,
+        method = "rms", norm = "euclidean"              # Change summary & norm.
+      )
+  ) |>
+  mutate(
+    timbre =
+      map(segments,
+        compmus_summarise, timbre,
+        method = "rms", norm = "euclidean"              # Change summary & norm.
+      )
+  )
+
+bzt_minimal |>
+  compmus_gather_timbre() |>
+  ggplot(
+    aes(
+      x = start + duration / 2,
+      width = duration,
+      y = basis,
+      fill = value
+    )
+  ) +
+  geom_tile() +
+  ggtitle("Microhouse: 'Duky - Endless Thoughts'") +
+  labs(x = "Time (s)", y = NULL, fill = "Magnitude") +
+  scale_fill_viridis_c() +
+  theme_classic()
+```
+</div>
+<div class="figure">
+```{r, echo=FALSE}
+bzt_electro <-
+  get_tidy_audio_analysis("3gAVzxCCo8zNlZDYsseJq7") |> # Change URI.
+  compmus_align(bars, segments) |>                     # Change `bars`
+  select(bars) |>                                      #   in all three
+  unnest(bars) |>                                      #   of these lines.
+  mutate(
+    pitches =
+      map(segments,
+        compmus_summarise, pitches,
+        method = "rms", norm = "euclidean"              # Change summary & norm.
+      )
+  ) |>
+  mutate(
+    timbre =
+      map(segments,
+        compmus_summarise, timbre,
+        method = "rms", norm = "euclidean"              # Change summary & norm.
+      )
+  )
+
+bzt_electro |>
+  compmus_gather_timbre() |>
+  ggplot(
+    aes(
+      x = start + duration / 2,
+      width = duration,
+      y = basis,
+      fill = value
+    )
+  ) +
+  geom_tile() +
+  ggtitle("Tech House: '100Hz - Stay'") +
+  labs(x = "Time (s)", y = NULL, fill = "Magnitude") +
+  scale_fill_viridis_c() +
+  theme_classic()
+```
+</div>
+</div>
+</div>
+
+### Chordograms
 <div class="wrapper">
 <div class="headr">
-Introduction
+Chordograms
 </div>
 <div class="text">
-The selected corpus encompasses three sub-genres: Bass House, Microhouse, and Tech House. Currently, it comprises 1127 tracks, with 153 tracks categorized as Bass House, 503 as Microhouse, and 441 as Electro House. These genres were chosen due to their ability to span a broad yet distinguishable range within the house music spectrum. The Bass House tracks are derived from compositions by Samuel Deep, Brawther, and Anil Aras, as well as from the Slapfunk label. This sub-genre emphasizes the lower spectrum of house music, characterized by powerful kicks, deep basslines, and rhythmic drums conducive to dancing. Microhouse, a sub-genre blending elements of techno with a slower tempo, features soft, cushiony kick-drums and a dreamy ambiance. The Microhouse tracks included in the corpus draw inspiration from compositions by Zip and Ricardo Villalobos, as well as releases from the Perlon label. The Tech House tracks included in the corpus are sourced from compositions by Mr C, Nathan Coles, and Buschwacka!, as well as releases from the Snatch Records label. Tech House is characterized as a fusion genre merging techno and house elements, featuring groove-driven beats, a minimalist approach, and the integration of technological sounds.
-
-<br>
-
-The selected corpus closely aligns with my musical interests and expertise, although there are areas where uncertainties persist. As a passionate DJ and music producer with releases on Spotify (for those interested, my profile can be found at: https://open.spotify.com/artist/1ux6lrKnUuH8POcbD6TzpF?si=Uq9N_4n_QAGJC7MmYbxiMw), my focus lies predominantly within the realm of house music. House music, characterized by a diverse spectrum of genres akin to other musical forms, encompasses a multitude of intriguing niches, with distinctions evident across various elements such as arrangement, drum patterns, sampling techniques, and tempo. Particularly within underground house music, which diverges from mainstream popular culture to cater to devoted enthusiasts, the differentiation among these niches is pronounced. Originating in Chicago's underground club scene in the 1980s, underground house music swiftly gained traction in Europe, with the UK actively participating in its evolution. During those years, thousands of vinyl records were pressed, each release typically limited to a small number of copies owing to the niche nature of the genre. Countries such as Germany, Italy, The Netherlands, and Sweden swiftly embraced and enriched the underground house music scene. Even today, at parties and festivals, these vintage records seamlessly intertwine with contemporary releases, showcasing the timeless qualities of certain productions from earlier years. While the visible complexity within these niches is undeniable, discussions with fellow composers often center around the perceived simplicity of house music. The question arises: "Isn't house music merely a repetitive 4/4 drum beat coupled with a basic arrangement template (intro, buildup, outro)?" In my perspective, the answer lies in both affirmation and negation. While many tracks categorized as house music exhibit repetitiveness and adhere to a basic arrangement template, the vast distinctions across various musical elements within the niches of underground house music underscore the complexity inherent in the genre. In this research, I aim to utilize the Spotify API as a third party in this discourse, shedding new light on the discussion by providing insights into the intricacies of house music.
-
-<br>
-
-The research examines the following main research question: 'How do the features extracted from the Spotify API contribute to understanding the extent of repetitiveness, complexity, and creative variation within House music as a genre?'. To address this question, the research is divided into several parts, each examining different aspects of music using the features provided by the Spotify API.
-</div>
+These figures depict the cepstrograms of three tracks within the corpus. They didn't seem compelling for this portfolio.
 </div>
 
+<div class="figures">
+<div class="figure">
 
-<!-- Week 10 -->
-<!-- ===================================== -->
+```{r, echo=FALSE}
+circshift <- function(v, n) {
+  if (n == 0) v else c(tail(v, n), head(v, -n))
+}
 
-<!-- Row {.tabset .tabset-fade} -->
-<!-- ------------------------------------- -->
+#      C     C#    D     Eb    E     F     F#    G     Ab    A     Bb    B
+major_chord <-
+  c(   1,    0,    0,    0,    1,    0,    0,    1,    0,    0,    0,    0)
+minor_chord <-
+  c(   1,    0,    0,    1,    0,    0,    0,    1,    0,    0,    0,    0)
+seventh_chord <-
+  c(   1,    0,    0,    0,    1,    0,    0,    1,    0,    0,    1,    0)
 
-<!-- ### Chordograms -->
-<!-- <div class="wrapper"> -->
-<!-- <div class="headr"> -->
-<!-- Chordograms -->
-<!-- </div> -->
-<!-- <div class="text"> -->
-<!-- These figures depict the chord progressions from three tracks within the corpus. All three tracks exhibit minimal variation in chord structure throughout. In the electro track, no singular chord prominently stands out in contrast to other genres. However, in the house track, it is evident which chords are emphasized. When listening to the track, the distinct chords are clearly audible. These findings reinforce the notion that the electronic music genre tends to feature simpler chord progressions. In my opinion, this figure isn't particularly suitable for electronic music, as tracks within this genre often remain within a single chord region and prioritize percussion and repetitive basslines. -->
-<!-- </div> -->
+major_key <-
+  c(6.35, 2.23, 3.48, 2.33, 4.38, 4.09, 2.52, 5.19, 2.39, 3.66, 2.29, 2.88)
+minor_key <-
+  c(6.33, 2.68, 3.52, 5.38, 2.60, 3.53, 2.54, 4.75, 3.98, 2.69, 3.34, 3.17)
 
-<!-- <div class="figures"> -->
-<!-- <div class="figure"> -->
+chord_templates <-
+  tribble(
+    ~name, ~template,
+    "Gb:7", circshift(seventh_chord, 6),
+    "Gb:maj", circshift(major_chord, 6),
+    "Bb:min", circshift(minor_chord, 10),
+    "Db:maj", circshift(major_chord, 1),
+    "F:min", circshift(minor_chord, 5),
+    "Ab:7", circshift(seventh_chord, 8),
+    "Ab:maj", circshift(major_chord, 8),
+    "C:min", circshift(minor_chord, 0),
+    "Eb:7", circshift(seventh_chord, 3),
+    "Eb:maj", circshift(major_chord, 3),
+    "G:min", circshift(minor_chord, 7),
+    "Bb:7", circshift(seventh_chord, 10),
+    "Bb:maj", circshift(major_chord, 10),
+    "D:min", circshift(minor_chord, 2),
+    "F:7", circshift(seventh_chord, 5),
+    "F:maj", circshift(major_chord, 5),
+    "A:min", circshift(minor_chord, 9),
+    "C:7", circshift(seventh_chord, 0),
+    "C:maj", circshift(major_chord, 0),
+    "E:min", circshift(minor_chord, 4),
+    "G:7", circshift(seventh_chord, 7),
+    "G:maj", circshift(major_chord, 7),
+    "B:min", circshift(minor_chord, 11),
+    "D:7", circshift(seventh_chord, 2),
+    "D:maj", circshift(major_chord, 2),
+    "F#:min", circshift(minor_chord, 6),
+    "A:7", circshift(seventh_chord, 9),
+    "A:maj", circshift(major_chord, 9),
+    "C#:min", circshift(minor_chord, 1),
+    "E:7", circshift(seventh_chord, 4),
+    "E:maj", circshift(major_chord, 4),
+    "G#:min", circshift(minor_chord, 8),
+    "B:7", circshift(seventh_chord, 11),
+    "B:maj", circshift(major_chord, 11),
+    "D#:min", circshift(minor_chord, 3)
+  )
 
-<!-- ```{r, echo=FALSE} -->
-<!-- # circshift <- function(v, n) { -->
-<!-- #   if (n == 0) v else c(tail(v, n), head(v, -n)) -->
-<!-- # } -->
-<!-- #  -->
-<!-- # #      C     C#    D     Eb    E     F     F#    G     Ab    A     Bb    B -->
-<!-- # major_chord <- -->
-<!-- #   c(   1,    0,    0,    0,    1,    0,    0,    1,    0,    0,    0,    0) -->
-<!-- # minor_chord <- -->
-<!-- #   c(   1,    0,    0,    1,    0,    0,    0,    1,    0,    0,    0,    0) -->
-<!-- # seventh_chord <- -->
-<!-- #   c(   1,    0,    0,    0,    1,    0,    0,    1,    0,    0,    1,    0) -->
-<!-- #  -->
-<!-- # major_key <- -->
-<!-- #   c(6.35, 2.23, 3.48, 2.33, 4.38, 4.09, 2.52, 5.19, 2.39, 3.66, 2.29, 2.88) -->
-<!-- # minor_key <- -->
-<!-- #   c(6.33, 2.68, 3.52, 5.38, 2.60, 3.53, 2.54, 4.75, 3.98, 2.69, 3.34, 3.17) -->
-<!-- #  -->
-<!-- # chord_templates <- -->
-<!-- #   tribble( -->
-<!-- #     ~name, ~template, -->
-<!-- #     "Gb:7", circshift(seventh_chord, 6), -->
-<!-- #     "Gb:maj", circshift(major_chord, 6), -->
-<!-- #     "Bb:min", circshift(minor_chord, 10), -->
-<!-- #     "Db:maj", circshift(major_chord, 1), -->
-<!-- #     "F:min", circshift(minor_chord, 5), -->
-<!-- #     "Ab:7", circshift(seventh_chord, 8), -->
-<!-- #     "Ab:maj", circshift(major_chord, 8), -->
-<!-- #     "C:min", circshift(minor_chord, 0), -->
-<!-- #     "Eb:7", circshift(seventh_chord, 3), -->
-<!-- #     "Eb:maj", circshift(major_chord, 3), -->
-<!-- #     "G:min", circshift(minor_chord, 7), -->
-<!-- #     "Bb:7", circshift(seventh_chord, 10), -->
-<!-- #     "Bb:maj", circshift(major_chord, 10), -->
-<!-- #     "D:min", circshift(minor_chord, 2), -->
-<!-- #     "F:7", circshift(seventh_chord, 5), -->
-<!-- #     "F:maj", circshift(major_chord, 5), -->
-<!-- #     "A:min", circshift(minor_chord, 9), -->
-<!-- #     "C:7", circshift(seventh_chord, 0), -->
-<!-- #     "C:maj", circshift(major_chord, 0), -->
-<!-- #     "E:min", circshift(minor_chord, 4), -->
-<!-- #     "G:7", circshift(seventh_chord, 7), -->
-<!-- #     "G:maj", circshift(major_chord, 7), -->
-<!-- #     "B:min", circshift(minor_chord, 11), -->
-<!-- #     "D:7", circshift(seventh_chord, 2), -->
-<!-- #     "D:maj", circshift(major_chord, 2), -->
-<!-- #     "F#:min", circshift(minor_chord, 6), -->
-<!-- #     "A:7", circshift(seventh_chord, 9), -->
-<!-- #     "A:maj", circshift(major_chord, 9), -->
-<!-- #     "C#:min", circshift(minor_chord, 1), -->
-<!-- #     "E:7", circshift(seventh_chord, 4), -->
-<!-- #     "E:maj", circshift(major_chord, 4), -->
-<!-- #     "G#:min", circshift(minor_chord, 8), -->
-<!-- #     "B:7", circshift(seventh_chord, 11), -->
-<!-- #     "B:maj", circshift(major_chord, 11), -->
-<!-- #     "D#:min", circshift(minor_chord, 3) -->
-<!-- #   ) -->
-<!-- #  -->
-<!-- # key_templates <- -->
-<!-- #   tribble( -->
-<!-- #     ~name, ~template, -->
-<!-- #     "Gb:maj", circshift(major_key, 6), -->
-<!-- #     "Bb:min", circshift(minor_key, 10), -->
-<!-- #     "Db:maj", circshift(major_key, 1), -->
-<!-- #     "F:min", circshift(minor_key, 5), -->
-<!-- #     "Ab:maj", circshift(major_key, 8), -->
-<!-- #     "C:min", circshift(minor_key, 0), -->
-<!-- #     "Eb:maj", circshift(major_key, 3), -->
-<!-- #     "G:min", circshift(minor_key, 7), -->
-<!-- #     "Bb:maj", circshift(major_key, 10), -->
-<!-- #     "D:min", circshift(minor_key, 2), -->
-<!-- #     "F:maj", circshift(major_key, 5), -->
-<!-- #     "A:min", circshift(minor_key, 9), -->
-<!-- #     "C:maj", circshift(major_key, 0), -->
-<!-- #     "E:min", circshift(minor_key, 4), -->
-<!-- #     "G:maj", circshift(major_key, 7), -->
-<!-- #     "B:min", circshift(minor_key, 11), -->
-<!-- #     "D:maj", circshift(major_key, 2), -->
-<!-- #     "F#:min", circshift(minor_key, 6), -->
-<!-- #     "A:maj", circshift(major_key, 9), -->
-<!-- #     "C#:min", circshift(minor_key, 1), -->
-<!-- #     "E:maj", circshift(major_key, 4), -->
-<!-- #     "G#:min", circshift(minor_key, 8), -->
-<!-- #     "B:maj", circshift(major_key, 11), -->
-<!-- #     "D#:min", circshift(minor_key, 3) -->
-<!-- #   ) -->
-<!-- #  -->
-<!-- # twenty_five <- -->
-<!-- #   get_tidy_audio_analysis("4H2qrfuQQdSTPL7c0QV7mD") |> -->
-<!-- #   compmus_align(sections, segments) |> -->
-<!-- #   select(sections) |> -->
-<!-- #   unnest(sections) |> -->
-<!-- #   mutate( -->
-<!-- #     pitches = -->
-<!-- #       map(segments, -->
-<!-- #         compmus_summarise, pitches, -->
-<!-- #         method = "mean", norm = "manhattan" -->
-<!-- #       ) -->
-<!-- #   ) -->
-<!-- #  -->
-<!-- # twenty_five |> -->
-<!-- #   compmus_match_pitch_template( -->
-<!-- #     chord_templates,         # Change to chord_templates if descired -->
-<!-- #     method = "euclidean",  # Try different distance metrics -->
-<!-- #     norm = "manhattan"     # Try different norms -->
-<!-- #   ) |> -->
-<!-- #   ggplot( -->
-<!-- #     aes(x = start + duration / 2, width = duration, y = name, fill = d) -->
-<!-- #   ) + -->
-<!-- #   geom_tile() + -->
-<!-- #   ggtitle("House: 'De Projekt - Catch De Play'") + -->
-<!-- #   scale_fill_viridis_c(guide = "none") + -->
-<!-- #   theme_minimal() + -->
-<!-- #   labs(x = "Time (s)", y = "") -->
-<!-- ``` -->
-<!-- </div> -->
+key_templates <-
+  tribble(
+    ~name, ~template,
+    "Gb:maj", circshift(major_key, 6),
+    "Bb:min", circshift(minor_key, 10),
+    "Db:maj", circshift(major_key, 1),
+    "F:min", circshift(minor_key, 5),
+    "Ab:maj", circshift(major_key, 8),
+    "C:min", circshift(minor_key, 0),
+    "Eb:maj", circshift(major_key, 3),
+    "G:min", circshift(minor_key, 7),
+    "Bb:maj", circshift(major_key, 10),
+    "D:min", circshift(minor_key, 2),
+    "F:maj", circshift(major_key, 5),
+    "A:min", circshift(minor_key, 9),
+    "C:maj", circshift(major_key, 0),
+    "E:min", circshift(minor_key, 4),
+    "G:maj", circshift(major_key, 7),
+    "B:min", circshift(minor_key, 11),
+    "D:maj", circshift(major_key, 2),
+    "F#:min", circshift(minor_key, 6),
+    "A:maj", circshift(major_key, 9),
+    "C#:min", circshift(minor_key, 1),
+    "E:maj", circshift(major_key, 4),
+    "G#:min", circshift(minor_key, 8),
+    "B:maj", circshift(major_key, 11),
+    "D#:min", circshift(minor_key, 3)
+  )
 
-<!-- <div class="figure"> -->
+twenty_five <-
+  get_tidy_audio_analysis("4TRuGdaiT2qoko85097hKq") |>
+  compmus_align(sections, segments) |>
+  select(sections) |>
+  unnest(sections) |>
+  mutate(
+    pitches =
+      map(segments,
+        compmus_summarise, pitches,
+        method = "mean", norm = "manhattan"
+      )
+  )
 
-<!-- ```{r, echo=FALSE} -->
-<!-- # circshift <- function(v, n) { -->
-<!-- #   if (n == 0) v else c(tail(v, n), head(v, -n)) -->
-<!-- # } -->
-<!-- #  -->
-<!-- # #      C     C#    D     Eb    E     F     F#    G     Ab    A     Bb    B -->
-<!-- # major_chord <- -->
-<!-- #   c(   1,    0,    0,    0,    1,    0,    0,    1,    0,    0,    0,    0) -->
-<!-- # minor_chord <- -->
-<!-- #   c(   1,    0,    0,    1,    0,    0,    0,    1,    0,    0,    0,    0) -->
-<!-- # seventh_chord <- -->
-<!-- #   c(   1,    0,    0,    0,    1,    0,    0,    1,    0,    0,    1,    0) -->
-<!-- #  -->
-<!-- # major_key <- -->
-<!-- #   c(6.35, 2.23, 3.48, 2.33, 4.38, 4.09, 2.52, 5.19, 2.39, 3.66, 2.29, 2.88) -->
-<!-- # minor_key <- -->
-<!-- #   c(6.33, 2.68, 3.52, 5.38, 2.60, 3.53, 2.54, 4.75, 3.98, 2.69, 3.34, 3.17) -->
-<!-- #  -->
-<!-- # chord_templates <- -->
-<!-- #   tribble( -->
-<!-- #     ~name, ~template, -->
-<!-- #     "Gb:7", circshift(seventh_chord, 6), -->
-<!-- #     "Gb:maj", circshift(major_chord, 6), -->
-<!-- #     "Bb:min", circshift(minor_chord, 10), -->
-<!-- #     "Db:maj", circshift(major_chord, 1), -->
-<!-- #     "F:min", circshift(minor_chord, 5), -->
-<!-- #     "Ab:7", circshift(seventh_chord, 8), -->
-<!-- #     "Ab:maj", circshift(major_chord, 8), -->
-<!-- #     "C:min", circshift(minor_chord, 0), -->
-<!-- #     "Eb:7", circshift(seventh_chord, 3), -->
-<!-- #     "Eb:maj", circshift(major_chord, 3), -->
-<!-- #     "G:min", circshift(minor_chord, 7), -->
-<!-- #     "Bb:7", circshift(seventh_chord, 10), -->
-<!-- #     "Bb:maj", circshift(major_chord, 10), -->
-<!-- #     "D:min", circshift(minor_chord, 2), -->
-<!-- #     "F:7", circshift(seventh_chord, 5), -->
-<!-- #     "F:maj", circshift(major_chord, 5), -->
-<!-- #     "A:min", circshift(minor_chord, 9), -->
-<!-- #     "C:7", circshift(seventh_chord, 0), -->
-<!-- #     "C:maj", circshift(major_chord, 0), -->
-<!-- #     "E:min", circshift(minor_chord, 4), -->
-<!-- #     "G:7", circshift(seventh_chord, 7), -->
-<!-- #     "G:maj", circshift(major_chord, 7), -->
-<!-- #     "B:min", circshift(minor_chord, 11), -->
-<!-- #     "D:7", circshift(seventh_chord, 2), -->
-<!-- #     "D:maj", circshift(major_chord, 2), -->
-<!-- #     "F#:min", circshift(minor_chord, 6), -->
-<!-- #     "A:7", circshift(seventh_chord, 9), -->
-<!-- #     "A:maj", circshift(major_chord, 9), -->
-<!-- #     "C#:min", circshift(minor_chord, 1), -->
-<!-- #     "E:7", circshift(seventh_chord, 4), -->
-<!-- #     "E:maj", circshift(major_chord, 4), -->
-<!-- #     "G#:min", circshift(minor_chord, 8), -->
-<!-- #     "B:7", circshift(seventh_chord, 11), -->
-<!-- #     "B:maj", circshift(major_chord, 11), -->
-<!-- #     "D#:min", circshift(minor_chord, 3) -->
-<!-- #   ) -->
-<!-- #  -->
-<!-- # key_templates <- -->
-<!-- #   tribble( -->
-<!-- #     ~name, ~template, -->
-<!-- #     "Gb:maj", circshift(major_key, 6), -->
-<!-- #     "Bb:min", circshift(minor_key, 10), -->
-<!-- #     "Db:maj", circshift(major_key, 1), -->
-<!-- #     "F:min", circshift(minor_key, 5), -->
-<!-- #     "Ab:maj", circshift(major_key, 8), -->
-<!-- #     "C:min", circshift(minor_key, 0), -->
-<!-- #     "Eb:maj", circshift(major_key, 3), -->
-<!-- #     "G:min", circshift(minor_key, 7), -->
-<!-- #     "Bb:maj", circshift(major_key, 10), -->
-<!-- #     "D:min", circshift(minor_key, 2), -->
-<!-- #     "F:maj", circshift(major_key, 5), -->
-<!-- #     "A:min", circshift(minor_key, 9), -->
-<!-- #     "C:maj", circshift(major_key, 0), -->
-<!-- #     "E:min", circshift(minor_key, 4), -->
-<!-- #     "G:maj", circshift(major_key, 7), -->
-<!-- #     "B:min", circshift(minor_key, 11), -->
-<!-- #     "D:maj", circshift(major_key, 2), -->
-<!-- #     "F#:min", circshift(minor_key, 6), -->
-<!-- #     "A:maj", circshift(major_key, 9), -->
-<!-- #     "C#:min", circshift(minor_key, 1), -->
-<!-- #     "E:maj", circshift(major_key, 4), -->
-<!-- #     "G#:min", circshift(minor_key, 8), -->
-<!-- #     "B:maj", circshift(major_key, 11), -->
-<!-- #     "D#:min", circshift(minor_key, 3) -->
-<!-- #   ) -->
-<!-- #  -->
-<!-- # twenty_five <- -->
-<!-- #   get_tidy_audio_analysis("7iGycpZv7eek2mf9X8oyDx") |> -->
-<!-- #   compmus_align(sections, segments) |> -->
-<!-- #   select(sections) |> -->
-<!-- #   unnest(sections) |> -->
-<!-- #   mutate( -->
-<!-- #     pitches = -->
-<!-- #       map(segments, -->
-<!-- #         compmus_summarise, pitches, -->
-<!-- #         method = "mean", norm = "manhattan" -->
-<!-- #       ) -->
-<!-- #   ) -->
-<!-- #  -->
-<!-- # twenty_five |> -->
-<!-- #   compmus_match_pitch_template( -->
-<!-- #     chord_templates,         # Change to chord_templates if descired -->
-<!-- #     method = "euclidean",  # Try different distance metrics -->
-<!-- #     norm = "manhattan"     # Try different norms -->
-<!-- #   ) |> -->
-<!-- #   ggplot( -->
-<!-- #     aes(x = start + duration / 2, width = duration, y = name, fill = d) -->
-<!-- #   ) + -->
-<!-- #   geom_tile() + -->
-<!-- #   ggtitle("'Minimal: Junes - Cafe Nostalgia'") + -->
-<!-- #   scale_fill_viridis_c(guide = "none") + -->
-<!-- #   theme_minimal() + -->
-<!-- #   labs(x = "Time (s)", y = "") -->
-<!-- ``` -->
-<!-- </div> -->
+twenty_five |>
+  compmus_match_pitch_template(
+    chord_templates,         # Change to chord_templates if descired
+    method = "euclidean",  # Try different distance metrics
+    norm = "manhattan"     # Try different norms
+  ) |>
+  ggplot(
+    aes(x = start + duration / 2, width = duration, y = name, fill = d)
+  ) +
+  geom_tile() +
+  ggtitle("Bass House: 'Julian Alexander - Sagacious'") +
+  scale_fill_viridis_c(guide = "none") +
+  theme_minimal() +
+  labs(x = "Time (s)", y = "")
+```
+</div>
 
-<!-- <div class="figure"> -->
+<div class="figure">
 
-<!-- ```{r, echo=FALSE} -->
-<!-- # circshift <- function(v, n) { -->
-<!-- #   if (n == 0) v else c(tail(v, n), head(v, -n)) -->
-<!-- # } -->
-<!-- #  -->
-<!-- # #      C     C#    D     Eb    E     F     F#    G     Ab    A     Bb    B -->
-<!-- # major_chord <- -->
-<!-- #   c(   1,    0,    0,    0,    1,    0,    0,    1,    0,    0,    0,    0) -->
-<!-- # minor_chord <- -->
-<!-- #   c(   1,    0,    0,    1,    0,    0,    0,    1,    0,    0,    0,    0) -->
-<!-- # seventh_chord <- -->
-<!-- #   c(   1,    0,    0,    0,    1,    0,    0,    1,    0,    0,    1,    0) -->
-<!-- #  -->
-<!-- # major_key <- -->
-<!-- #   c(6.35, 2.23, 3.48, 2.33, 4.38, 4.09, 2.52, 5.19, 2.39, 3.66, 2.29, 2.88) -->
-<!-- # minor_key <- -->
-<!-- #   c(6.33, 2.68, 3.52, 5.38, 2.60, 3.53, 2.54, 4.75, 3.98, 2.69, 3.34, 3.17) -->
-<!-- #  -->
-<!-- # chord_templates <- -->
-<!-- #   tribble( -->
-<!-- #     ~name, ~template, -->
-<!-- #     "Gb:7", circshift(seventh_chord, 6), -->
-<!-- #     "Gb:maj", circshift(major_chord, 6), -->
-<!-- #     "Bb:min", circshift(minor_chord, 10), -->
-<!-- #     "Db:maj", circshift(major_chord, 1), -->
-<!-- #     "F:min", circshift(minor_chord, 5), -->
-<!-- #     "Ab:7", circshift(seventh_chord, 8), -->
-<!-- #     "Ab:maj", circshift(major_chord, 8), -->
-<!-- #     "C:min", circshift(minor_chord, 0), -->
-<!-- #     "Eb:7", circshift(seventh_chord, 3), -->
-<!-- #     "Eb:maj", circshift(major_chord, 3), -->
-<!-- #     "G:min", circshift(minor_chord, 7), -->
-<!-- #     "Bb:7", circshift(seventh_chord, 10), -->
-<!-- #     "Bb:maj", circshift(major_chord, 10), -->
-<!-- #     "D:min", circshift(minor_chord, 2), -->
-<!-- #     "F:7", circshift(seventh_chord, 5), -->
-<!-- #     "F:maj", circshift(major_chord, 5), -->
-<!-- #     "A:min", circshift(minor_chord, 9), -->
-<!-- #     "C:7", circshift(seventh_chord, 0), -->
-<!-- #     "C:maj", circshift(major_chord, 0), -->
-<!-- #     "E:min", circshift(minor_chord, 4), -->
-<!-- #     "G:7", circshift(seventh_chord, 7), -->
-<!-- #     "G:maj", circshift(major_chord, 7), -->
-<!-- #     "B:min", circshift(minor_chord, 11), -->
-<!-- #     "D:7", circshift(seventh_chord, 2), -->
-<!-- #     "D:maj", circshift(major_chord, 2), -->
-<!-- #     "F#:min", circshift(minor_chord, 6), -->
-<!-- #     "A:7", circshift(seventh_chord, 9), -->
-<!-- #     "A:maj", circshift(major_chord, 9), -->
-<!-- #     "C#:min", circshift(minor_chord, 1), -->
-<!-- #     "E:7", circshift(seventh_chord, 4), -->
-<!-- #     "E:maj", circshift(major_chord, 4), -->
-<!-- #     "G#:min", circshift(minor_chord, 8), -->
-<!-- #     "B:7", circshift(seventh_chord, 11), -->
-<!-- #     "B:maj", circshift(major_chord, 11), -->
-<!-- #     "D#:min", circshift(minor_chord, 3) -->
-<!-- #   ) -->
-<!-- #  -->
-<!-- # key_templates <- -->
-<!-- #   tribble( -->
-<!-- #     ~name, ~template, -->
-<!-- #     "Gb:maj", circshift(major_key, 6), -->
-<!-- #     "Bb:min", circshift(minor_key, 10), -->
-<!-- #     "Db:maj", circshift(major_key, 1), -->
-<!-- #     "F:min", circshift(minor_key, 5), -->
-<!-- #     "Ab:maj", circshift(major_key, 8), -->
-<!-- #     "C:min", circshift(minor_key, 0), -->
-<!-- #     "Eb:maj", circshift(major_key, 3), -->
-<!-- #     "G:min", circshift(minor_key, 7), -->
-<!-- #     "Bb:maj", circshift(major_key, 10), -->
-<!-- #     "D:min", circshift(minor_key, 2), -->
-<!-- #     "F:maj", circshift(major_key, 5), -->
-<!-- #     "A:min", circshift(minor_key, 9), -->
-<!-- #     "C:maj", circshift(major_key, 0), -->
-<!-- #     "E:min", circshift(minor_key, 4), -->
-<!-- #     "G:maj", circshift(major_key, 7), -->
-<!-- #     "B:min", circshift(minor_key, 11), -->
-<!-- #     "D:maj", circshift(major_key, 2), -->
-<!-- #     "F#:min", circshift(minor_key, 6), -->
-<!-- #     "A:maj", circshift(major_key, 9), -->
-<!-- #     "C#:min", circshift(minor_key, 1), -->
-<!-- #     "E:maj", circshift(major_key, 4), -->
-<!-- #     "G#:min", circshift(minor_key, 8), -->
-<!-- #     "B:maj", circshift(major_key, 11), -->
-<!-- #     "D#:min", circshift(minor_key, 3) -->
-<!-- #   ) -->
-<!-- #  -->
-<!-- # twenty_five <- -->
-<!-- #   get_tidy_audio_analysis("1s84YaJC06MjSCXoOnCwAj") |> -->
-<!-- #   compmus_align(sections, segments) |> -->
-<!-- #   select(sections) |> -->
-<!-- #   unnest(sections) |> -->
-<!-- #   mutate( -->
-<!-- #     pitches = -->
-<!-- #       map(segments, -->
-<!-- #         compmus_summarise, pitches, -->
-<!-- #         method = "mean", norm = "manhattan" -->
-<!-- #       ) -->
-<!-- #   ) -->
-<!-- #  -->
-<!-- # twenty_five |> -->
-<!-- #   compmus_match_pitch_template( -->
-<!-- #     chord_templates,         # Change to chord_templates if descired -->
-<!-- #     method = "euclidean",  # Try different distance metrics -->
-<!-- #     norm = "manhattan"     # Try different norms -->
-<!-- #   ) |> -->
-<!-- #   ggplot( -->
-<!-- #     aes(x = start + duration / 2, width = duration, y = name, fill = d) -->
-<!-- #   ) + -->
-<!-- #   geom_tile() + -->
-<!-- #   ggtitle("Electro: 'Breaka - Liquid Gold'") + -->
-<!-- #   scale_fill_viridis_c(guide = "none") + -->
-<!-- #   theme_minimal() + -->
-<!-- #   labs(x = "Time (s)", y = "") -->
-<!-- ``` -->
-<!-- </div> -->
-<!-- </div> -->
-<!-- </div> -->
+```{r, echo=FALSE}
+circshift <- function(v, n) {
+  if (n == 0) v else c(tail(v, n), head(v, -n))
+}
 
-<!-- ### Keygrams -->
-<!-- <div class="wrapper"> -->
+#      C     C#    D     Eb    E     F     F#    G     Ab    A     Bb    B
+major_chord <-
+  c(   1,    0,    0,    0,    1,    0,    0,    1,    0,    0,    0,    0)
+minor_chord <-
+  c(   1,    0,    0,    1,    0,    0,    0,    1,    0,    0,    0,    0)
+seventh_chord <-
+  c(   1,    0,    0,    0,    1,    0,    0,    1,    0,    0,    1,    0)
 
-<!-- <div class="headr"> -->
-<!-- Keygrams -->
-<!-- </div> -->
-<!-- <div class="text"> -->
-<!-- These figures illustrate the key progressions of three tracks within the corpus. Each track displays minimal variation in chord structure, with the minimal track exhibiting slightly more variation compared to the others, yet still maintaining stability. This further emphasizes the tendency of electronic music to feature simpler key progressions. In my view, this figure may not be well-suited for electronic music analysis, given that tracks in this genre often remain within a single chord region and emphasize percussion and repetitive basslines. -->
-<!-- </div> -->
+major_key <-
+  c(6.35, 2.23, 3.48, 2.33, 4.38, 4.09, 2.52, 5.19, 2.39, 3.66, 2.29, 2.88)
+minor_key <-
+  c(6.33, 2.68, 3.52, 5.38, 2.60, 3.53, 2.54, 4.75, 3.98, 2.69, 3.34, 3.17)
 
-<!-- <div class="figures"> -->
-<!-- <div class="figure"> -->
+chord_templates <-
+  tribble(
+    ~name, ~template,
+    "Gb:7", circshift(seventh_chord, 6),
+    "Gb:maj", circshift(major_chord, 6),
+    "Bb:min", circshift(minor_chord, 10),
+    "Db:maj", circshift(major_chord, 1),
+    "F:min", circshift(minor_chord, 5),
+    "Ab:7", circshift(seventh_chord, 8),
+    "Ab:maj", circshift(major_chord, 8),
+    "C:min", circshift(minor_chord, 0),
+    "Eb:7", circshift(seventh_chord, 3),
+    "Eb:maj", circshift(major_chord, 3),
+    "G:min", circshift(minor_chord, 7),
+    "Bb:7", circshift(seventh_chord, 10),
+    "Bb:maj", circshift(major_chord, 10),
+    "D:min", circshift(minor_chord, 2),
+    "F:7", circshift(seventh_chord, 5),
+    "F:maj", circshift(major_chord, 5),
+    "A:min", circshift(minor_chord, 9),
+    "C:7", circshift(seventh_chord, 0),
+    "C:maj", circshift(major_chord, 0),
+    "E:min", circshift(minor_chord, 4),
+    "G:7", circshift(seventh_chord, 7),
+    "G:maj", circshift(major_chord, 7),
+    "B:min", circshift(minor_chord, 11),
+    "D:7", circshift(seventh_chord, 2),
+    "D:maj", circshift(major_chord, 2),
+    "F#:min", circshift(minor_chord, 6),
+    "A:7", circshift(seventh_chord, 9),
+    "A:maj", circshift(major_chord, 9),
+    "C#:min", circshift(minor_chord, 1),
+    "E:7", circshift(seventh_chord, 4),
+    "E:maj", circshift(major_chord, 4),
+    "G#:min", circshift(minor_chord, 8),
+    "B:7", circshift(seventh_chord, 11),
+    "B:maj", circshift(major_chord, 11),
+    "D#:min", circshift(minor_chord, 3)
+  )
 
-<!-- ```{r, echo=FALSE} -->
-<!-- # circshift <- function(v, n) { -->
-<!-- #   if (n == 0) v else c(tail(v, n), head(v, -n)) -->
-<!-- # } -->
-<!-- #  -->
-<!-- # #      C     C#    D     Eb    E     F     F#    G     Ab    A     Bb    B -->
-<!-- # major_chord <- -->
-<!-- #   c(   1,    0,    0,    0,    1,    0,    0,    1,    0,    0,    0,    0) -->
-<!-- # minor_chord <- -->
-<!-- #   c(   1,    0,    0,    1,    0,    0,    0,    1,    0,    0,    0,    0) -->
-<!-- # seventh_chord <- -->
-<!-- #   c(   1,    0,    0,    0,    1,    0,    0,    1,    0,    0,    1,    0) -->
-<!-- #  -->
-<!-- # major_key <- -->
-<!-- #   c(6.35, 2.23, 3.48, 2.33, 4.38, 4.09, 2.52, 5.19, 2.39, 3.66, 2.29, 2.88) -->
-<!-- # minor_key <- -->
-<!-- #   c(6.33, 2.68, 3.52, 5.38, 2.60, 3.53, 2.54, 4.75, 3.98, 2.69, 3.34, 3.17) -->
-<!-- #  -->
-<!-- # chord_templates <- -->
-<!-- #   tribble( -->
-<!-- #     ~name, ~template, -->
-<!-- #     "Gb:7", circshift(seventh_chord, 6), -->
-<!-- #     "Gb:maj", circshift(major_chord, 6), -->
-<!-- #     "Bb:min", circshift(minor_chord, 10), -->
-<!-- #     "Db:maj", circshift(major_chord, 1), -->
-<!-- #     "F:min", circshift(minor_chord, 5), -->
-<!-- #     "Ab:7", circshift(seventh_chord, 8), -->
-<!-- #     "Ab:maj", circshift(major_chord, 8), -->
-<!-- #     "C:min", circshift(minor_chord, 0), -->
-<!-- #     "Eb:7", circshift(seventh_chord, 3), -->
-<!-- #     "Eb:maj", circshift(major_chord, 3), -->
-<!-- #     "G:min", circshift(minor_chord, 7), -->
-<!-- #     "Bb:7", circshift(seventh_chord, 10), -->
-<!-- #     "Bb:maj", circshift(major_chord, 10), -->
-<!-- #     "D:min", circshift(minor_chord, 2), -->
-<!-- #     "F:7", circshift(seventh_chord, 5), -->
-<!-- #     "F:maj", circshift(major_chord, 5), -->
-<!-- #     "A:min", circshift(minor_chord, 9), -->
-<!-- #     "C:7", circshift(seventh_chord, 0), -->
-<!-- #     "C:maj", circshift(major_chord, 0), -->
-<!-- #     "E:min", circshift(minor_chord, 4), -->
-<!-- #     "G:7", circshift(seventh_chord, 7), -->
-<!-- #     "G:maj", circshift(major_chord, 7), -->
-<!-- #     "B:min", circshift(minor_chord, 11), -->
-<!-- #     "D:7", circshift(seventh_chord, 2), -->
-<!-- #     "D:maj", circshift(major_chord, 2), -->
-<!-- #     "F#:min", circshift(minor_chord, 6), -->
-<!-- #     "A:7", circshift(seventh_chord, 9), -->
-<!-- #     "A:maj", circshift(major_chord, 9), -->
-<!-- #     "C#:min", circshift(minor_chord, 1), -->
-<!-- #     "E:7", circshift(seventh_chord, 4), -->
-<!-- #     "E:maj", circshift(major_chord, 4), -->
-<!-- #     "G#:min", circshift(minor_chord, 8), -->
-<!-- #     "B:7", circshift(seventh_chord, 11), -->
-<!-- #     "B:maj", circshift(major_chord, 11), -->
-<!-- #     "D#:min", circshift(minor_chord, 3) -->
-<!-- #   ) -->
-<!-- #  -->
-<!-- # key_templates <- -->
-<!-- #   tribble( -->
-<!-- #     ~name, ~template, -->
-<!-- #     "Gb:maj", circshift(major_key, 6), -->
-<!-- #     "Bb:min", circshift(minor_key, 10), -->
-<!-- #     "Db:maj", circshift(major_key, 1), -->
-<!-- #     "F:min", circshift(minor_key, 5), -->
-<!-- #     "Ab:maj", circshift(major_key, 8), -->
-<!-- #     "C:min", circshift(minor_key, 0), -->
-<!-- #     "Eb:maj", circshift(major_key, 3), -->
-<!-- #     "G:min", circshift(minor_key, 7), -->
-<!-- #     "Bb:maj", circshift(major_key, 10), -->
-<!-- #     "D:min", circshift(minor_key, 2), -->
-<!-- #     "F:maj", circshift(major_key, 5), -->
-<!-- #     "A:min", circshift(minor_key, 9), -->
-<!-- #     "C:maj", circshift(major_key, 0), -->
-<!-- #     "E:min", circshift(minor_key, 4), -->
-<!-- #     "G:maj", circshift(major_key, 7), -->
-<!-- #     "B:min", circshift(minor_key, 11), -->
-<!-- #     "D:maj", circshift(major_key, 2), -->
-<!-- #     "F#:min", circshift(minor_key, 6), -->
-<!-- #     "A:maj", circshift(major_key, 9), -->
-<!-- #     "C#:min", circshift(minor_key, 1), -->
-<!-- #     "E:maj", circshift(major_key, 4), -->
-<!-- #     "G#:min", circshift(minor_key, 8), -->
-<!-- #     "B:maj", circshift(major_key, 11), -->
-<!-- #     "D#:min", circshift(minor_key, 3) -->
-<!-- #   ) -->
-<!-- #  -->
-<!-- # twenty_five <- -->
-<!-- #   get_tidy_audio_analysis("4H2qrfuQQdSTPL7c0QV7mD") |> -->
-<!-- #   compmus_align(sections, segments) |> -->
-<!-- #   select(sections) |> -->
-<!-- #   unnest(sections) |> -->
-<!-- #   mutate( -->
-<!-- #     pitches = -->
-<!-- #       map(segments, -->
-<!-- #         compmus_summarise, pitches, -->
-<!-- #         method = "mean", norm = "manhattan" -->
-<!-- #       ) -->
-<!-- #   ) -->
-<!-- #  -->
-<!-- # twenty_five |> -->
-<!-- #   compmus_match_pitch_template( -->
-<!-- #     key_templates,         # Change to chord_templates if descired -->
-<!-- #     method = "euclidean",  # Try different distance metrics -->
-<!-- #     norm = "manhattan"     # Try different norms -->
-<!-- #   ) |> -->
-<!-- #   ggplot( -->
-<!-- #     aes(x = start + duration / 2, width = duration, y = name, fill = d) -->
-<!-- #   ) + -->
-<!-- #   geom_tile() + -->
-<!-- #   ggtitle("House: 'De Projekt - Catch De Play'") + -->
-<!-- #   scale_fill_viridis_c(guide = "none") + -->
-<!-- #   theme_minimal() + -->
-<!-- #   labs(x = "Time (s)", y = "") -->
-<!-- ``` -->
-<!-- </div> -->
+key_templates <-
+  tribble(
+    ~name, ~template,
+    "Gb:maj", circshift(major_key, 6),
+    "Bb:min", circshift(minor_key, 10),
+    "Db:maj", circshift(major_key, 1),
+    "F:min", circshift(minor_key, 5),
+    "Ab:maj", circshift(major_key, 8),
+    "C:min", circshift(minor_key, 0),
+    "Eb:maj", circshift(major_key, 3),
+    "G:min", circshift(minor_key, 7),
+    "Bb:maj", circshift(major_key, 10),
+    "D:min", circshift(minor_key, 2),
+    "F:maj", circshift(major_key, 5),
+    "A:min", circshift(minor_key, 9),
+    "C:maj", circshift(major_key, 0),
+    "E:min", circshift(minor_key, 4),
+    "G:maj", circshift(major_key, 7),
+    "B:min", circshift(minor_key, 11),
+    "D:maj", circshift(major_key, 2),
+    "F#:min", circshift(minor_key, 6),
+    "A:maj", circshift(major_key, 9),
+    "C#:min", circshift(minor_key, 1),
+    "E:maj", circshift(major_key, 4),
+    "G#:min", circshift(minor_key, 8),
+    "B:maj", circshift(major_key, 11),
+    "D#:min", circshift(minor_key, 3)
+  )
 
-<!-- <div class="figure"> -->
+twenty_five <-
+  get_tidy_audio_analysis("74j9d4tz6Ixw8pkkA1RCCM") |>
+  compmus_align(sections, segments) |>
+  select(sections) |>
+  unnest(sections) |>
+  mutate(
+    pitches =
+      map(segments,
+        compmus_summarise, pitches,
+        method = "mean", norm = "manhattan"
+      )
+  )
 
-<!-- ```{r, echo=FALSE} -->
-<!-- # circshift <- function(v, n) { -->
-<!-- #   if (n == 0) v else c(tail(v, n), head(v, -n)) -->
-<!-- # } -->
-<!-- #  -->
-<!-- # #      C     C#    D     Eb    E     F     F#    G     Ab    A     Bb    B -->
-<!-- # major_chord <- -->
-<!-- #   c(   1,    0,    0,    0,    1,    0,    0,    1,    0,    0,    0,    0) -->
-<!-- # minor_chord <- -->
-<!-- #   c(   1,    0,    0,    1,    0,    0,    0,    1,    0,    0,    0,    0) -->
-<!-- # seventh_chord <- -->
-<!-- #   c(   1,    0,    0,    0,    1,    0,    0,    1,    0,    0,    1,    0) -->
-<!-- #  -->
-<!-- # major_key <- -->
-<!-- #   c(6.35, 2.23, 3.48, 2.33, 4.38, 4.09, 2.52, 5.19, 2.39, 3.66, 2.29, 2.88) -->
-<!-- # minor_key <- -->
-<!-- #   c(6.33, 2.68, 3.52, 5.38, 2.60, 3.53, 2.54, 4.75, 3.98, 2.69, 3.34, 3.17) -->
-<!-- #  -->
-<!-- # chord_templates <- -->
-<!-- #   tribble( -->
-<!-- #     ~name, ~template, -->
-<!-- #     "Gb:7", circshift(seventh_chord, 6), -->
-<!-- #     "Gb:maj", circshift(major_chord, 6), -->
-<!-- #     "Bb:min", circshift(minor_chord, 10), -->
-<!-- #     "Db:maj", circshift(major_chord, 1), -->
-<!-- #     "F:min", circshift(minor_chord, 5), -->
-<!-- #     "Ab:7", circshift(seventh_chord, 8), -->
-<!-- #     "Ab:maj", circshift(major_chord, 8), -->
-<!-- #     "C:min", circshift(minor_chord, 0), -->
-<!-- #     "Eb:7", circshift(seventh_chord, 3), -->
-<!-- #     "Eb:maj", circshift(major_chord, 3), -->
-<!-- #     "G:min", circshift(minor_chord, 7), -->
-<!-- #     "Bb:7", circshift(seventh_chord, 10), -->
-<!-- #     "Bb:maj", circshift(major_chord, 10), -->
-<!-- #     "D:min", circshift(minor_chord, 2), -->
-<!-- #     "F:7", circshift(seventh_chord, 5), -->
-<!-- #     "F:maj", circshift(major_chord, 5), -->
-<!-- #     "A:min", circshift(minor_chord, 9), -->
-<!-- #     "C:7", circshift(seventh_chord, 0), -->
-<!-- #     "C:maj", circshift(major_chord, 0), -->
-<!-- #     "E:min", circshift(minor_chord, 4), -->
-<!-- #     "G:7", circshift(seventh_chord, 7), -->
-<!-- #     "G:maj", circshift(major_chord, 7), -->
-<!-- #     "B:min", circshift(minor_chord, 11), -->
-<!-- #     "D:7", circshift(seventh_chord, 2), -->
-<!-- #     "D:maj", circshift(major_chord, 2), -->
-<!-- #     "F#:min", circshift(minor_chord, 6), -->
-<!-- #     "A:7", circshift(seventh_chord, 9), -->
-<!-- #     "A:maj", circshift(major_chord, 9), -->
-<!-- #     "C#:min", circshift(minor_chord, 1), -->
-<!-- #     "E:7", circshift(seventh_chord, 4), -->
-<!-- #     "E:maj", circshift(major_chord, 4), -->
-<!-- #     "G#:min", circshift(minor_chord, 8), -->
-<!-- #     "B:7", circshift(seventh_chord, 11), -->
-<!-- #     "B:maj", circshift(major_chord, 11), -->
-<!-- #     "D#:min", circshift(minor_chord, 3) -->
-<!-- #   ) -->
-<!-- #  -->
-<!-- # key_templates <- -->
-<!-- #   tribble( -->
-<!-- #     ~name, ~template, -->
-<!-- #     "Gb:maj", circshift(major_key, 6), -->
-<!-- #     "Bb:min", circshift(minor_key, 10), -->
-<!-- #     "Db:maj", circshift(major_key, 1), -->
-<!-- #     "F:min", circshift(minor_key, 5), -->
-<!-- #     "Ab:maj", circshift(major_key, 8), -->
-<!-- #     "C:min", circshift(minor_key, 0), -->
-<!-- #     "Eb:maj", circshift(major_key, 3), -->
-<!-- #     "G:min", circshift(minor_key, 7), -->
-<!-- #     "Bb:maj", circshift(major_key, 10), -->
-<!-- #     "D:min", circshift(minor_key, 2), -->
-<!-- #     "F:maj", circshift(major_key, 5), -->
-<!-- #     "A:min", circshift(minor_key, 9), -->
-<!-- #     "C:maj", circshift(major_key, 0), -->
-<!-- #     "E:min", circshift(minor_key, 4), -->
-<!-- #     "G:maj", circshift(major_key, 7), -->
-<!-- #     "B:min", circshift(minor_key, 11), -->
-<!-- #     "D:maj", circshift(major_key, 2), -->
-<!-- #     "F#:min", circshift(minor_key, 6), -->
-<!-- #     "A:maj", circshift(major_key, 9), -->
-<!-- #     "C#:min", circshift(minor_key, 1), -->
-<!-- #     "E:maj", circshift(major_key, 4), -->
-<!-- #     "G#:min", circshift(minor_key, 8), -->
-<!-- #     "B:maj", circshift(major_key, 11), -->
-<!-- #     "D#:min", circshift(minor_key, 3) -->
-<!-- #   ) -->
-<!-- #  -->
-<!-- # twenty_five <- -->
-<!-- #   get_tidy_audio_analysis("7iGycpZv7eek2mf9X8oyDx") |> -->
-<!-- #   compmus_align(sections, segments) |> -->
-<!-- #   select(sections) |> -->
-<!-- #   unnest(sections) |> -->
-<!-- #   mutate( -->
-<!-- #     pitches = -->
-<!-- #       map(segments, -->
-<!-- #         compmus_summarise, pitches, -->
-<!-- #         method = "mean", norm = "manhattan" -->
-<!-- #       ) -->
-<!-- #   ) -->
-<!-- #  -->
-<!-- # twenty_five |> -->
-<!-- #   compmus_match_pitch_template( -->
-<!-- #     key_templates,         # Change to chord_templates if descired -->
-<!-- #     method = "euclidean",  # Try different distance metrics -->
-<!-- #     norm = "manhattan"     # Try different norms -->
-<!-- #   ) |> -->
-<!-- #   ggplot( -->
-<!-- #     aes(x = start + duration / 2, width = duration, y = name, fill = d) -->
-<!-- #   ) + -->
-<!-- #   geom_tile() + -->
-<!-- #   ggtitle("'Minimal: Junes - Cafe Nostalgia'") + -->
-<!-- #   scale_fill_viridis_c(guide = "none") + -->
-<!-- #   theme_minimal() + -->
-<!-- #   labs(x = "Time (s)", y = "") -->
-<!-- ``` -->
-<!-- </div> -->
+twenty_five |>
+  compmus_match_pitch_template(
+    chord_templates,         # Change to chord_templates if descired
+    method = "euclidean",  # Try different distance metrics
+    norm = "manhattan"     # Try different norms
+  ) |>
+  ggplot(
+    aes(x = start + duration / 2, width = duration, y = name, fill = d)
+  ) +
+  geom_tile() +
+  ggtitle("Microhouse: 'Bodeler - Philypop'") +
+  scale_fill_viridis_c(guide = "none") +
+  theme_minimal() +
+  labs(x = "Time (s)", y = "")
+```
+</div>
 
-<!-- <div class="figure"> -->
+<div class="figure">
 
-<!-- ```{r, echo=FALSE} -->
-<!-- # circshift <- function(v, n) { -->
-<!-- #   if (n == 0) v else c(tail(v, n), head(v, -n)) -->
-<!-- # } -->
-<!-- #  -->
-<!-- # #      C     C#    D     Eb    E     F     F#    G     Ab    A     Bb    B -->
-<!-- # major_chord <- -->
-<!-- #   c(   1,    0,    0,    0,    1,    0,    0,    1,    0,    0,    0,    0) -->
-<!-- # minor_chord <- -->
-<!-- #   c(   1,    0,    0,    1,    0,    0,    0,    1,    0,    0,    0,    0) -->
-<!-- # seventh_chord <- -->
-<!-- #   c(   1,    0,    0,    0,    1,    0,    0,    1,    0,    0,    1,    0) -->
-<!-- #  -->
-<!-- # major_key <- -->
-<!-- #   c(6.35, 2.23, 3.48, 2.33, 4.38, 4.09, 2.52, 5.19, 2.39, 3.66, 2.29, 2.88) -->
-<!-- # minor_key <- -->
-<!-- #   c(6.33, 2.68, 3.52, 5.38, 2.60, 3.53, 2.54, 4.75, 3.98, 2.69, 3.34, 3.17) -->
-<!-- #  -->
-<!-- # chord_templates <- -->
-<!-- #   tribble( -->
-<!-- #     ~name, ~template, -->
-<!-- #     "Gb:7", circshift(seventh_chord, 6), -->
-<!-- #     "Gb:maj", circshift(major_chord, 6), -->
-<!-- #     "Bb:min", circshift(minor_chord, 10), -->
-<!-- #     "Db:maj", circshift(major_chord, 1), -->
-<!-- #     "F:min", circshift(minor_chord, 5), -->
-<!-- #     "Ab:7", circshift(seventh_chord, 8), -->
-<!-- #     "Ab:maj", circshift(major_chord, 8), -->
-<!-- #     "C:min", circshift(minor_chord, 0), -->
-<!-- #     "Eb:7", circshift(seventh_chord, 3), -->
-<!-- #     "Eb:maj", circshift(major_chord, 3), -->
-<!-- #     "G:min", circshift(minor_chord, 7), -->
-<!-- #     "Bb:7", circshift(seventh_chord, 10), -->
-<!-- #     "Bb:maj", circshift(major_chord, 10), -->
-<!-- #     "D:min", circshift(minor_chord, 2), -->
-<!-- #     "F:7", circshift(seventh_chord, 5), -->
-<!-- #     "F:maj", circshift(major_chord, 5), -->
-<!-- #     "A:min", circshift(minor_chord, 9), -->
-<!-- #     "C:7", circshift(seventh_chord, 0), -->
-<!-- #     "C:maj", circshift(major_chord, 0), -->
-<!-- #     "E:min", circshift(minor_chord, 4), -->
-<!-- #     "G:7", circshift(seventh_chord, 7), -->
-<!-- #     "G:maj", circshift(major_chord, 7), -->
-<!-- #     "B:min", circshift(minor_chord, 11), -->
-<!-- #     "D:7", circshift(seventh_chord, 2), -->
-<!-- #     "D:maj", circshift(major_chord, 2), -->
-<!-- #     "F#:min", circshift(minor_chord, 6), -->
-<!-- #     "A:7", circshift(seventh_chord, 9), -->
-<!-- #     "A:maj", circshift(major_chord, 9), -->
-<!-- #     "C#:min", circshift(minor_chord, 1), -->
-<!-- #     "E:7", circshift(seventh_chord, 4), -->
-<!-- #     "E:maj", circshift(major_chord, 4), -->
-<!-- #     "G#:min", circshift(minor_chord, 8), -->
-<!-- #     "B:7", circshift(seventh_chord, 11), -->
-<!-- #     "B:maj", circshift(major_chord, 11), -->
-<!-- #     "D#:min", circshift(minor_chord, 3) -->
-<!-- #   ) -->
-<!-- #  -->
-<!-- # key_templates <- -->
-<!-- #   tribble( -->
-<!-- #     ~name, ~template, -->
-<!-- #     "Gb:maj", circshift(major_key, 6), -->
-<!-- #     "Bb:min", circshift(minor_key, 10), -->
-<!-- #     "Db:maj", circshift(major_key, 1), -->
-<!-- #     "F:min", circshift(minor_key, 5), -->
-<!-- #     "Ab:maj", circshift(major_key, 8), -->
-<!-- #     "C:min", circshift(minor_key, 0), -->
-<!-- #     "Eb:maj", circshift(major_key, 3), -->
-<!-- #     "G:min", circshift(minor_key, 7), -->
-<!-- #     "Bb:maj", circshift(major_key, 10), -->
-<!-- #     "D:min", circshift(minor_key, 2), -->
-<!-- #     "F:maj", circshift(major_key, 5), -->
-<!-- #     "A:min", circshift(minor_key, 9), -->
-<!-- #     "C:maj", circshift(major_key, 0), -->
-<!-- #     "E:min", circshift(minor_key, 4), -->
-<!-- #     "G:maj", circshift(major_key, 7), -->
-<!-- #     "B:min", circshift(minor_key, 11), -->
-<!-- #     "D:maj", circshift(major_key, 2), -->
-<!-- #     "F#:min", circshift(minor_key, 6), -->
-<!-- #     "A:maj", circshift(major_key, 9), -->
-<!-- #     "C#:min", circshift(minor_key, 1), -->
-<!-- #     "E:maj", circshift(major_key, 4), -->
-<!-- #     "G#:min", circshift(minor_key, 8), -->
-<!-- #     "B:maj", circshift(major_key, 11), -->
-<!-- #     "D#:min", circshift(minor_key, 3) -->
-<!-- #   ) -->
-<!-- #  -->
-<!-- # twenty_five <- -->
-<!-- #   get_tidy_audio_analysis("1s84YaJC06MjSCXoOnCwAj") |> -->
-<!-- #   compmus_align(sections, segments) |> -->
-<!-- #   select(sections) |> -->
-<!-- #   unnest(sections) |> -->
-<!-- #   mutate( -->
-<!-- #     pitches = -->
-<!-- #       map(segments, -->
-<!-- #         compmus_summarise, pitches, -->
-<!-- #         method = "mean", norm = "manhattan" -->
-<!-- #       ) -->
-<!-- #   ) -->
-<!-- #  -->
-<!-- # twenty_five |> -->
-<!-- #   compmus_match_pitch_template( -->
-<!-- #     key_templates,         # Change to chord_templates if descired -->
-<!-- #     method = "euclidean",  # Try different distance metrics -->
-<!-- #     norm = "manhattan"     # Try different norms -->
-<!-- #   ) |> -->
-<!-- #   ggplot( -->
-<!-- #     aes(x = start + duration / 2, width = duration, y = name, fill = d) -->
-<!-- #   ) + -->
-<!-- #   geom_tile() + -->
-<!-- #   ggtitle("Electro: 'Breaka - Liquid Gold'") + -->
-<!-- #   scale_fill_viridis_c(guide = "none") + -->
-<!-- #   theme_minimal() + -->
-<!-- #   labs(x = "Time (s)", y = "") -->
-<!-- ``` -->
-<!-- </div> -->
-<!-- </div> -->
-<!-- </div> -->
+```{r, echo=FALSE}
+circshift <- function(v, n) {
+  if (n == 0) v else c(tail(v, n), head(v, -n))
+}
+
+#      C     C#    D     Eb    E     F     F#    G     Ab    A     Bb    B
+major_chord <-
+  c(   1,    0,    0,    0,    1,    0,    0,    1,    0,    0,    0,    0)
+minor_chord <-
+  c(   1,    0,    0,    1,    0,    0,    0,    1,    0,    0,    0,    0)
+seventh_chord <-
+  c(   1,    0,    0,    0,    1,    0,    0,    1,    0,    0,    1,    0)
+
+major_key <-
+  c(6.35, 2.23, 3.48, 2.33, 4.38, 4.09, 2.52, 5.19, 2.39, 3.66, 2.29, 2.88)
+minor_key <-
+  c(6.33, 2.68, 3.52, 5.38, 2.60, 3.53, 2.54, 4.75, 3.98, 2.69, 3.34, 3.17)
+
+chord_templates <-
+  tribble(
+    ~name, ~template,
+    "Gb:7", circshift(seventh_chord, 6),
+    "Gb:maj", circshift(major_chord, 6),
+    "Bb:min", circshift(minor_chord, 10),
+    "Db:maj", circshift(major_chord, 1),
+    "F:min", circshift(minor_chord, 5),
+    "Ab:7", circshift(seventh_chord, 8),
+    "Ab:maj", circshift(major_chord, 8),
+    "C:min", circshift(minor_chord, 0),
+    "Eb:7", circshift(seventh_chord, 3),
+    "Eb:maj", circshift(major_chord, 3),
+    "G:min", circshift(minor_chord, 7),
+    "Bb:7", circshift(seventh_chord, 10),
+    "Bb:maj", circshift(major_chord, 10),
+    "D:min", circshift(minor_chord, 2),
+    "F:7", circshift(seventh_chord, 5),
+    "F:maj", circshift(major_chord, 5),
+    "A:min", circshift(minor_chord, 9),
+    "C:7", circshift(seventh_chord, 0),
+    "C:maj", circshift(major_chord, 0),
+    "E:min", circshift(minor_chord, 4),
+    "G:7", circshift(seventh_chord, 7),
+    "G:maj", circshift(major_chord, 7),
+    "B:min", circshift(minor_chord, 11),
+    "D:7", circshift(seventh_chord, 2),
+    "D:maj", circshift(major_chord, 2),
+    "F#:min", circshift(minor_chord, 6),
+    "A:7", circshift(seventh_chord, 9),
+    "A:maj", circshift(major_chord, 9),
+    "C#:min", circshift(minor_chord, 1),
+    "E:7", circshift(seventh_chord, 4),
+    "E:maj", circshift(major_chord, 4),
+    "G#:min", circshift(minor_chord, 8),
+    "B:7", circshift(seventh_chord, 11),
+    "B:maj", circshift(major_chord, 11),
+    "D#:min", circshift(minor_chord, 3)
+  )
+
+key_templates <-
+  tribble(
+    ~name, ~template,
+    "Gb:maj", circshift(major_key, 6),
+    "Bb:min", circshift(minor_key, 10),
+    "Db:maj", circshift(major_key, 1),
+    "F:min", circshift(minor_key, 5),
+    "Ab:maj", circshift(major_key, 8),
+    "C:min", circshift(minor_key, 0),
+    "Eb:maj", circshift(major_key, 3),
+    "G:min", circshift(minor_key, 7),
+    "Bb:maj", circshift(major_key, 10),
+    "D:min", circshift(minor_key, 2),
+    "F:maj", circshift(major_key, 5),
+    "A:min", circshift(minor_key, 9),
+    "C:maj", circshift(major_key, 0),
+    "E:min", circshift(minor_key, 4),
+    "G:maj", circshift(major_key, 7),
+    "B:min", circshift(minor_key, 11),
+    "D:maj", circshift(major_key, 2),
+    "F#:min", circshift(minor_key, 6),
+    "A:maj", circshift(major_key, 9),
+    "C#:min", circshift(minor_key, 1),
+    "E:maj", circshift(major_key, 4),
+    "G#:min", circshift(minor_key, 8),
+    "B:maj", circshift(major_key, 11),
+    "D#:min", circshift(minor_key, 3)
+  )
+
+twenty_five <-
+  get_tidy_audio_analysis("5iOk4ZzlRRGguhzzRvGkS4") |>
+  compmus_align(sections, segments) |>
+  select(sections) |>
+  unnest(sections) |>
+  mutate(
+    pitches =
+      map(segments,
+        compmus_summarise, pitches,
+        method = "mean", norm = "manhattan"
+      )
+  )
+
+twenty_five |>
+  compmus_match_pitch_template(
+    chord_templates,         # Change to chord_templates if descired
+    method = "euclidean",  # Try different distance metrics
+    norm = "manhattan"     # Try different norms
+  ) |>
+  ggplot(
+    aes(x = start + duration / 2, width = duration, y = name, fill = d)
+  ) +
+  geom_tile() +
+  ggtitle("Tech House: 'Jay Tripwire - Mary Wana'") +
+  scale_fill_viridis_c(guide = "none") +
+  theme_minimal() +
+  labs(x = "Time (s)", y = "")
+```
+</div>
+</div>
+</div>
+
+### Keygrams
+<div class="wrapper">
+
+<div class="headr">
+Keygrams
+</div>
+<div class="text">
+These figures depict the keygrams of three tracks within the corpus. They didn't seem compelling for this portfolio.
+</div>
+
+<div class="figures">
+<div class="figure">
+
+```{r, echo=FALSE}
+circshift <- function(v, n) {
+  if (n == 0) v else c(tail(v, n), head(v, -n))
+}
+
+#      C     C#    D     Eb    E     F     F#    G     Ab    A     Bb    B
+major_chord <-
+  c(   1,    0,    0,    0,    1,    0,    0,    1,    0,    0,    0,    0)
+minor_chord <-
+  c(   1,    0,    0,    1,    0,    0,    0,    1,    0,    0,    0,    0)
+seventh_chord <-
+  c(   1,    0,    0,    0,    1,    0,    0,    1,    0,    0,    1,    0)
+
+major_key <-
+  c(6.35, 2.23, 3.48, 2.33, 4.38, 4.09, 2.52, 5.19, 2.39, 3.66, 2.29, 2.88)
+minor_key <-
+  c(6.33, 2.68, 3.52, 5.38, 2.60, 3.53, 2.54, 4.75, 3.98, 2.69, 3.34, 3.17)
+
+chord_templates <-
+  tribble(
+    ~name, ~template,
+    "Gb:7", circshift(seventh_chord, 6),
+    "Gb:maj", circshift(major_chord, 6),
+    "Bb:min", circshift(minor_chord, 10),
+    "Db:maj", circshift(major_chord, 1),
+    "F:min", circshift(minor_chord, 5),
+    "Ab:7", circshift(seventh_chord, 8),
+    "Ab:maj", circshift(major_chord, 8),
+    "C:min", circshift(minor_chord, 0),
+    "Eb:7", circshift(seventh_chord, 3),
+    "Eb:maj", circshift(major_chord, 3),
+    "G:min", circshift(minor_chord, 7),
+    "Bb:7", circshift(seventh_chord, 10),
+    "Bb:maj", circshift(major_chord, 10),
+    "D:min", circshift(minor_chord, 2),
+    "F:7", circshift(seventh_chord, 5),
+    "F:maj", circshift(major_chord, 5),
+    "A:min", circshift(minor_chord, 9),
+    "C:7", circshift(seventh_chord, 0),
+    "C:maj", circshift(major_chord, 0),
+    "E:min", circshift(minor_chord, 4),
+    "G:7", circshift(seventh_chord, 7),
+    "G:maj", circshift(major_chord, 7),
+    "B:min", circshift(minor_chord, 11),
+    "D:7", circshift(seventh_chord, 2),
+    "D:maj", circshift(major_chord, 2),
+    "F#:min", circshift(minor_chord, 6),
+    "A:7", circshift(seventh_chord, 9),
+    "A:maj", circshift(major_chord, 9),
+    "C#:min", circshift(minor_chord, 1),
+    "E:7", circshift(seventh_chord, 4),
+    "E:maj", circshift(major_chord, 4),
+    "G#:min", circshift(minor_chord, 8),
+    "B:7", circshift(seventh_chord, 11),
+    "B:maj", circshift(major_chord, 11),
+    "D#:min", circshift(minor_chord, 3)
+  )
+
+key_templates <-
+  tribble(
+    ~name, ~template,
+    "Gb:maj", circshift(major_key, 6),
+    "Bb:min", circshift(minor_key, 10),
+    "Db:maj", circshift(major_key, 1),
+    "F:min", circshift(minor_key, 5),
+    "Ab:maj", circshift(major_key, 8),
+    "C:min", circshift(minor_key, 0),
+    "Eb:maj", circshift(major_key, 3),
+    "G:min", circshift(minor_key, 7),
+    "Bb:maj", circshift(major_key, 10),
+    "D:min", circshift(minor_key, 2),
+    "F:maj", circshift(major_key, 5),
+    "A:min", circshift(minor_key, 9),
+    "C:maj", circshift(major_key, 0),
+    "E:min", circshift(minor_key, 4),
+    "G:maj", circshift(major_key, 7),
+    "B:min", circshift(minor_key, 11),
+    "D:maj", circshift(major_key, 2),
+    "F#:min", circshift(minor_key, 6),
+    "A:maj", circshift(major_key, 9),
+    "C#:min", circshift(minor_key, 1),
+    "E:maj", circshift(major_key, 4),
+    "G#:min", circshift(minor_key, 8),
+    "B:maj", circshift(major_key, 11),
+    "D#:min", circshift(minor_key, 3)
+  )
+
+twenty_five <-
+  get_tidy_audio_analysis("4yHUFCUq8DoWxpWStqJQmZ") |>
+  compmus_align(sections, segments) |>
+  select(sections) |>
+  unnest(sections) |>
+  mutate(
+    pitches =
+      map(segments,
+        compmus_summarise, pitches,
+        method = "mean", norm = "manhattan"
+      )
+  )
+
+twenty_five |>
+  compmus_match_pitch_template(
+    key_templates,         # Change to chord_templates if descired
+    method = "euclidean",  # Try different distance metrics
+    norm = "manhattan"     # Try different norms
+  ) |>
+  ggplot(
+    aes(x = start + duration / 2, width = duration, y = name, fill = d)
+  ) +
+  geom_tile() +
+  ggtitle("Bass House: 'U Know The Drill - Back On It'") +
+  scale_fill_viridis_c(guide = "none") +
+  theme_minimal() +
+  labs(x = "Time (s)", y = "")
+```
+</div>
+
+<div class="figure">
+
+```{r, echo=FALSE}
+circshift <- function(v, n) {
+  if (n == 0) v else c(tail(v, n), head(v, -n))
+}
+
+#      C     C#    D     Eb    E     F     F#    G     Ab    A     Bb    B
+major_chord <-
+  c(   1,    0,    0,    0,    1,    0,    0,    1,    0,    0,    0,    0)
+minor_chord <-
+  c(   1,    0,    0,    1,    0,    0,    0,    1,    0,    0,    0,    0)
+seventh_chord <-
+  c(   1,    0,    0,    0,    1,    0,    0,    1,    0,    0,    1,    0)
+
+major_key <-
+  c(6.35, 2.23, 3.48, 2.33, 4.38, 4.09, 2.52, 5.19, 2.39, 3.66, 2.29, 2.88)
+minor_key <-
+  c(6.33, 2.68, 3.52, 5.38, 2.60, 3.53, 2.54, 4.75, 3.98, 2.69, 3.34, 3.17)
+
+chord_templates <-
+  tribble(
+    ~name, ~template,
+    "Gb:7", circshift(seventh_chord, 6),
+    "Gb:maj", circshift(major_chord, 6),
+    "Bb:min", circshift(minor_chord, 10),
+    "Db:maj", circshift(major_chord, 1),
+    "F:min", circshift(minor_chord, 5),
+    "Ab:7", circshift(seventh_chord, 8),
+    "Ab:maj", circshift(major_chord, 8),
+    "C:min", circshift(minor_chord, 0),
+    "Eb:7", circshift(seventh_chord, 3),
+    "Eb:maj", circshift(major_chord, 3),
+    "G:min", circshift(minor_chord, 7),
+    "Bb:7", circshift(seventh_chord, 10),
+    "Bb:maj", circshift(major_chord, 10),
+    "D:min", circshift(minor_chord, 2),
+    "F:7", circshift(seventh_chord, 5),
+    "F:maj", circshift(major_chord, 5),
+    "A:min", circshift(minor_chord, 9),
+    "C:7", circshift(seventh_chord, 0),
+    "C:maj", circshift(major_chord, 0),
+    "E:min", circshift(minor_chord, 4),
+    "G:7", circshift(seventh_chord, 7),
+    "G:maj", circshift(major_chord, 7),
+    "B:min", circshift(minor_chord, 11),
+    "D:7", circshift(seventh_chord, 2),
+    "D:maj", circshift(major_chord, 2),
+    "F#:min", circshift(minor_chord, 6),
+    "A:7", circshift(seventh_chord, 9),
+    "A:maj", circshift(major_chord, 9),
+    "C#:min", circshift(minor_chord, 1),
+    "E:7", circshift(seventh_chord, 4),
+    "E:maj", circshift(major_chord, 4),
+    "G#:min", circshift(minor_chord, 8),
+    "B:7", circshift(seventh_chord, 11),
+    "B:maj", circshift(major_chord, 11),
+    "D#:min", circshift(minor_chord, 3)
+  )
+
+key_templates <-
+  tribble(
+    ~name, ~template,
+    "Gb:maj", circshift(major_key, 6),
+    "Bb:min", circshift(minor_key, 10),
+    "Db:maj", circshift(major_key, 1),
+    "F:min", circshift(minor_key, 5),
+    "Ab:maj", circshift(major_key, 8),
+    "C:min", circshift(minor_key, 0),
+    "Eb:maj", circshift(major_key, 3),
+    "G:min", circshift(minor_key, 7),
+    "Bb:maj", circshift(major_key, 10),
+    "D:min", circshift(minor_key, 2),
+    "F:maj", circshift(major_key, 5),
+    "A:min", circshift(minor_key, 9),
+    "C:maj", circshift(major_key, 0),
+    "E:min", circshift(minor_key, 4),
+    "G:maj", circshift(major_key, 7),
+    "B:min", circshift(minor_key, 11),
+    "D:maj", circshift(major_key, 2),
+    "F#:min", circshift(minor_key, 6),
+    "A:maj", circshift(major_key, 9),
+    "C#:min", circshift(minor_key, 1),
+    "E:maj", circshift(major_key, 4),
+    "G#:min", circshift(minor_key, 8),
+    "B:maj", circshift(major_key, 11),
+    "D#:min", circshift(minor_key, 3)
+  )
+
+twenty_five <-
+  get_tidy_audio_analysis("5QWUSJYczCcxorDYqvhAjg") |>
+  compmus_align(sections, segments) |>
+  select(sections) |>
+  unnest(sections) |>
+  mutate(
+    pitches =
+      map(segments,
+        compmus_summarise, pitches,
+        method = "mean", norm = "manhattan"
+      )
+  )
+
+twenty_five |>
+  compmus_match_pitch_template(
+    key_templates,         # Change to chord_templates if descired
+    method = "euclidean",  # Try different distance metrics
+    norm = "manhattan"     # Try different norms
+  ) |>
+  ggplot(
+    aes(x = start + duration / 2, width = duration, y = name, fill = d)
+  ) +
+  geom_tile() +
+  ggtitle("Microhouse: 'Afrique - Slap'") +
+  scale_fill_viridis_c(guide = "none") +
+  theme_minimal() +
+  labs(x = "Time (s)", y = "")
+```
+</div>
+
+<div class="figure">
+
+```{r, echo=FALSE}
+circshift <- function(v, n) {
+  if (n == 0) v else c(tail(v, n), head(v, -n))
+}
+
+#      C     C#    D     Eb    E     F     F#    G     Ab    A     Bb    B
+major_chord <-
+  c(   1,    0,    0,    0,    1,    0,    0,    1,    0,    0,    0,    0)
+minor_chord <-
+  c(   1,    0,    0,    1,    0,    0,    0,    1,    0,    0,    0,    0)
+seventh_chord <-
+  c(   1,    0,    0,    0,    1,    0,    0,    1,    0,    0,    1,    0)
+
+major_key <-
+  c(6.35, 2.23, 3.48, 2.33, 4.38, 4.09, 2.52, 5.19, 2.39, 3.66, 2.29, 2.88)
+minor_key <-
+  c(6.33, 2.68, 3.52, 5.38, 2.60, 3.53, 2.54, 4.75, 3.98, 2.69, 3.34, 3.17)
+
+chord_templates <-
+  tribble(
+    ~name, ~template,
+    "Gb:7", circshift(seventh_chord, 6),
+    "Gb:maj", circshift(major_chord, 6),
+    "Bb:min", circshift(minor_chord, 10),
+    "Db:maj", circshift(major_chord, 1),
+    "F:min", circshift(minor_chord, 5),
+    "Ab:7", circshift(seventh_chord, 8),
+    "Ab:maj", circshift(major_chord, 8),
+    "C:min", circshift(minor_chord, 0),
+    "Eb:7", circshift(seventh_chord, 3),
+    "Eb:maj", circshift(major_chord, 3),
+    "G:min", circshift(minor_chord, 7),
+    "Bb:7", circshift(seventh_chord, 10),
+    "Bb:maj", circshift(major_chord, 10),
+    "D:min", circshift(minor_chord, 2),
+    "F:7", circshift(seventh_chord, 5),
+    "F:maj", circshift(major_chord, 5),
+    "A:min", circshift(minor_chord, 9),
+    "C:7", circshift(seventh_chord, 0),
+    "C:maj", circshift(major_chord, 0),
+    "E:min", circshift(minor_chord, 4),
+    "G:7", circshift(seventh_chord, 7),
+    "G:maj", circshift(major_chord, 7),
+    "B:min", circshift(minor_chord, 11),
+    "D:7", circshift(seventh_chord, 2),
+    "D:maj", circshift(major_chord, 2),
+    "F#:min", circshift(minor_chord, 6),
+    "A:7", circshift(seventh_chord, 9),
+    "A:maj", circshift(major_chord, 9),
+    "C#:min", circshift(minor_chord, 1),
+    "E:7", circshift(seventh_chord, 4),
+    "E:maj", circshift(major_chord, 4),
+    "G#:min", circshift(minor_chord, 8),
+    "B:7", circshift(seventh_chord, 11),
+    "B:maj", circshift(major_chord, 11),
+    "D#:min", circshift(minor_chord, 3)
+  )
+
+key_templates <-
+  tribble(
+    ~name, ~template,
+    "Gb:maj", circshift(major_key, 6),
+    "Bb:min", circshift(minor_key, 10),
+    "Db:maj", circshift(major_key, 1),
+    "F:min", circshift(minor_key, 5),
+    "Ab:maj", circshift(major_key, 8),
+    "C:min", circshift(minor_key, 0),
+    "Eb:maj", circshift(major_key, 3),
+    "G:min", circshift(minor_key, 7),
+    "Bb:maj", circshift(major_key, 10),
+    "D:min", circshift(minor_key, 2),
+    "F:maj", circshift(major_key, 5),
+    "A:min", circshift(minor_key, 9),
+    "C:maj", circshift(major_key, 0),
+    "E:min", circshift(minor_key, 4),
+    "G:maj", circshift(major_key, 7),
+    "B:min", circshift(minor_key, 11),
+    "D:maj", circshift(major_key, 2),
+    "F#:min", circshift(minor_key, 6),
+    "A:maj", circshift(major_key, 9),
+    "C#:min", circshift(minor_key, 1),
+    "E:maj", circshift(major_key, 4),
+    "G#:min", circshift(minor_key, 8),
+    "B:maj", circshift(major_key, 11),
+    "D#:min", circshift(minor_key, 3)
+  )
+
+twenty_five <-
+  get_tidy_audio_analysis("5WSpFtYT3C065lSMlFln2o") |>
+  compmus_align(sections, segments) |>
+  select(sections) |>
+  unnest(sections) |>
+  mutate(
+    pitches =
+      map(segments,
+        compmus_summarise, pitches,
+        method = "mean", norm = "manhattan"
+      )
+  )
+
+twenty_five |>
+  compmus_match_pitch_template(
+    key_templates,         # Change to chord_templates if descired
+    method = "euclidean",  # Try different distance metrics
+    norm = "manhattan"     # Try different norms
+  ) |>
+  ggplot(
+    aes(x = start + duration / 2, width = duration, y = name, fill = d)
+  ) +
+  geom_tile() +
+  ggtitle("Tech House: 'Chris Jackson - Feel Free'") +
+  scale_fill_viridis_c(guide = "none") +
+  theme_minimal() +
+  labs(x = "Time (s)", y = "")
+```
+</div>
+</div>
+</div>
