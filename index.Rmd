@@ -1151,7 +1151,11 @@ Cepstrograms
 </div>
 
 <div class="text">
-These figures depict the cepstrograms of three tracks within the corpus. They didn't seem compelling for this portfolio.
+These figures depict the C
+
+
+
+epstrograms of three tracks within the corpus. They didn't seem compelling for this portfolio.
 </div>
 <div class="figures">
 <div class="figure">
