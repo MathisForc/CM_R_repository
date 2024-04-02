@@ -573,7 +573,6 @@ wood |>
 
 Timbre Features
 =====================================
-### Self-Similarity Matrices
 <div class="wrapper">
 
 <div class="header_wrapper_single">
@@ -1120,12 +1119,11 @@ These findings suggest that the Spotify API contributes significantly to the dis
 
 <br>
 
-Another important aspect of House music is its primary purpose: to be experienced on the dancefloor rather than being repeatedly streamed on headphones. On the dancefloors, DJs aim to convey a narrative through their track selection rather than compiling a diverse playlist. DJs in this realm meticulously curate their record collections for their DJ mixes, showcasing them selectively. Unlike Spotify, there isn't an algorithm in the House music scene that recommends new tracks based on listening history or co-listeners.
+Another important aspect of House music is its primary purpose: to be experienced on the dancefloor rather than being repeatedly streamed on headphones. On the dancefloors, DJs aim to convey a narrative through their track selection rather than compiling a diverse playlist. DJs in this realm meticulously curate their record collections for their DJ mixes, showcasing them selectively. Unlike Spotify, there isn't an algorithm in the House music scene that recommends new tracks based on listening history or co-listeners. In conclusion, the examination of underground House music may present challenges due to its exclusivity. However, despite this, insights about the genre were still obtained through the availability of current remasters on Spotify. Is underground House music more than a typical 4x4 beat? Undoubtedly, from the analysis and also supported by data from the Spotify API. And when you are still not convinced, you should come to the dance floor once.
 
 <br>
 
-In conclusion, the examination of underground House music may present challenges due to its exclusivity. However, despite this, insights about the genre were still obtained through the availability of current remasters on Spotify. Is underground House music more than a typical 4x4 beat? Undoubtedly, from the analysis and also supported by data from the Spotify API. And when you are still not convinced, you should come to the dance floor once.
-
+For future research in the realm of House music. one could delve deeper into exploring the evolving landscape of sub-genres and their impact on cultural and artistic expressions. Investigating the emergence of new sub-genres and their resonance within the global electronic music community could provide valuable insights into shifting trends and audience preferences. Additionally, examining the influence of technological advancements, such as streaming platforms and digital production tools, on the production, distribution, and consumption of House music could offer a comprehensive understanding of its contemporary relevance. This research would be interesting to musicians, DJs, practitioners in musicology through providing them with nuanced perspectives on the ongoing evolution of electronic dance music and its socio-cultural significance in the digital age.
 </div>
 </div>
 
