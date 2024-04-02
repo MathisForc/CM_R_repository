@@ -912,7 +912,7 @@ Classifier Algorithm
 <div class="header_wrapper_single">
 
 <div class="header_single">
-Chromagrams
+Classifier Algorithm
 </div>
 
 <div class="header_question_single">
