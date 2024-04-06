@@ -1096,15 +1096,10 @@ indie_knn <-
 indie_knn |> get_conf_mat() |> autoplot(type = "heatmap")
 ```
 </div>
-
-
 </div>
 
 
-
-
-
-Conclusion {.intro-text}
+Conclusions {.intro-text}
 =====================================
 <div class="wrapper">
 <div class="headr">
