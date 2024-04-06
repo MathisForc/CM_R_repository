@@ -1999,7 +1999,7 @@ twenty_five |>
     aes(x = start + duration / 2, width = duration, y = name, fill = d)
   ) +
   geom_tile() +
-  ggtitle("Tech house: 'Chris Jackson - Feel Free'") +
+  ggtitle("Tech House: 'Chris Jackson - Feel Free'") +
   scale_fill_viridis_c(guide = "none") +
   theme_minimal() +
   labs(x = "Time (s)", y = "")
