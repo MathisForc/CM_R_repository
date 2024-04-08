@@ -1128,7 +1128,7 @@ For future research in the realm of House music. one could delve deeper into exp
 </div>
 
 
-Irrelevant figures{.intro-text}
+Irrelevant Figures{.intro-text}
 =====================================
 
 Row {.tabset .tabset-fade}
